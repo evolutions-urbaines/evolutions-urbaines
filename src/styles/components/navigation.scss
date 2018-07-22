@@ -1,0 +1,35 @@
+.navigation {
+  background-color: $blue;
+  transition: background-color 0.5s ease;
+  &-simple + main {
+    padding-top: 5rem !important;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .navigation-top:not(.navigation-simple) {
+    position: absolute;
+    background-color: transparent;
+    padding-top: 30px;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  main {
+    transition: margin-top 0.5s ease;
+  }
+  .navigation {
+    font-size: 1.2rem;
+    &-opened + main {
+      margin-top: 180px;
+    }
+  }
+}
+
+// Offset anchors
+:target:before {
+  content: '';
+  display: block;
+  height: 90px;
+  margin-top: -90px;
+}
