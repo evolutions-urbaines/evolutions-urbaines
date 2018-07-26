@@ -1,0 +1,24 @@
+.children-mx-2 {
+  & > * {
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+.children-mx-3 {
+  & > * {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

@@ -6,13 +6,13 @@ import { StaticQuery, graphql } from 'gatsby'
 import '../styles/index.scss'
 import '@fortawesome/fontawesome-free/css/all.css'
 
-import Navigation from './navigation'
+import LandingNavigation from './landingNavigation'
 import Footer from './footer'
 
 // import ogImage from '../images/ogImage.jpg';
 // import ogImageSquare from '../images/ogImageSquare.jpg';
 
-const Layout = ({ children, pathname }) => (
+const LandingLayout = ({ children, pathname }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -63,7 +63,7 @@ const Layout = ({ children, pathname }) => (
           ]}
         />
 
-        <Navigation pathname={pathname} />
+        <LandingNavigation pathname={pathname} />
 
         <main>{children}</main>
 
@@ -73,8 +73,8 @@ const Layout = ({ children, pathname }) => (
   />
 )
 
-Layout.propTypes = {
+LandingLayout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default Layout
+export default LandingLayout

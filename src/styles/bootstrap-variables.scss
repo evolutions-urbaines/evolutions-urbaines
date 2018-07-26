@@ -1,0 +1,86 @@
+@font-face {
+  font-family: 'ProgrammeDrivy';
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url('fonts/ProgrammeDrivy-Light.woff2') format('woff2'),
+    url('fonts/ProgrammeDrivy-Light.woff') format('woff');
+}
+@font-face {
+  font-family: 'ProgrammeDrivy';
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url('fonts/ProgrammeDrivy-Regular.woff2') format('woff2'),
+    url('fonts/ProgrammeDrivy-Regular.woff') format('woff');
+}
+$programme-drivy: 'ProgrammeDrivy', Helvetica, Arial, sans-serif;
+
+$font-family-sans-serif: $programme-drivy;
+// $headings-font-family: $programme-drivy;
+$headings-font-weight: bold;
+// $font-size-base: 0.875rem;
+
+// Colors
+$white: #fff;
+// $gray-100: #f8f9fa !default;
+// $gray-200: #e9ecef !default;
+// $gray-300: #dee2e6 !default;
+// $gray-400: #ced4da !default;
+// $gray-500: #adb5bd !default;
+// $gray-600: #6c757d !default;
+// $gray-700: #495057 !default;
+// $gray-800: #343a40 !default;
+// $gray-900: #212529 !default;
+// $black:    #000 !default;
+
+$blue: #262959;
+// $indigo:  #6610f2 !default;
+// $purple:  #6f42c1 !default;
+// $pink:    #e83e8c !default;
+// $red:     #dc3545 !default;
+// $orange:  #fd7e14 !default;
+$yellow: #d8ff00;
+// $green:   #28a745 !default;
+// $teal:    #20c997 !default;
+$cyan: #00d9d9;
+//
+// $primary: $blue !default;
+// $secondary: $gray-600 !default;
+// $success: $green !default;
+// $info: $cyan !default;
+// $warning: $yellow !default;
+// $danger: $red !default;
+// $light: $gray-100 !default;
+// $dark: $gray-800 !default;
+
+$body-color: $blue;
+$yiq-text-dark: $blue;
+$hr-border-color: rgba($white, 0.5);
+
+// $border-radius: 0.25rem !default;
+// $border-radius-lg: 0.3rem !default;
+// $border-radius-sm: 0.2rem !default;
+
+// Navbar
+@function str-replace($string, $search, $replace: '') {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace +
+      str-replace(
+        str-slice($string, $index + str-length($search)),
+        $search,
+        $replace
+      );
+  }
+
+  @return $string;
+}
+
+$navbar-dark-toggler-border-color: rgba($white, 0.9);
+$navbar-dark-toggler-icon-bg: str-replace(
+  url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-dark-toggler-border-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"),
+  '#',
+  '%23'
+);

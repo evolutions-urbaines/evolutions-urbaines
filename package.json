@@ -18,6 +18,8 @@
     "gatsby-plugin-netlify-cms": "next",
     "gatsby-plugin-react-helmet": "next",
     "gatsby-plugin-sass": "next",
+    "moment": "^2.22.2",
+    "moment-business-days": "^1.0.6",
     "netlify-cms": "^1.9.3",
     "node-sass": "^4.9.2",
     "react": "^16.3.2",

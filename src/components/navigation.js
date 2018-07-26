@@ -39,7 +39,9 @@ class Navigation extends Component {
 
   classes = () =>
     classNames('navigation', 'fixed-top', {
-      'navigation-simple': [].includes(this.props.pathname),
+      'navigation-simple': ['/coolworking', '/coolworking/'].includes(
+        this.props.pathname
+      ),
       'navigation-top': this.state.isTop,
       'navigation-opened': this.state.isOpen,
     })
@@ -50,7 +52,7 @@ class Navigation extends Component {
         <Navbar dark expand="md">
           <div className="container">
             <NavbarBrand href="/" onClick={this.closeNavbar}>
-              <i className="fas fa-car fa-2x" />
+              Evolutions<br />Urbaines
             </NavbarBrand>
             <button className="navbar-toggler" onClick={this.toggleNavbar}>
               <span className="navbar-toggler-icon" />
