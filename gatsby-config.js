@@ -22,5 +22,7 @@ module.exports = {
         precision: 8,
       },
     },
+    'gatsby-plugin-purgecss',
+    'gatsby-plugin-sitemap',
   ],
 }
