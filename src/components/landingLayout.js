@@ -63,7 +63,7 @@ const LandingLayout = ({ children, pathname }) => (
           ]}
         />
 
-        <LandingNavigation pathname={pathname} />
+        <LandingNavigation />
 
         <main>{children}</main>
 

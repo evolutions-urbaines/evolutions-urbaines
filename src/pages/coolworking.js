@@ -115,7 +115,7 @@ class CoolworkingPage extends Component {
 
   render() {
     return (
-      <LandingLayout pathname={this.props.location.pathname}>
+      <LandingLayout>
         <LandingHero>
           <div className="container position-relative">
             <div className="mb-5">
