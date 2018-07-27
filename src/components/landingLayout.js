@@ -12,7 +12,7 @@ import Footer from './footer'
 // import ogImage from '../images/ogImage.jpg';
 // import ogImageSquare from '../images/ogImageSquare.jpg';
 
-const LandingLayout = ({ children, pathname }) => (
+const LandingLayout = ({ children, segmentName, segmentLogoUrl }) => (
   <StaticQuery
     query={graphql`
       query LandingTitleQuery {
@@ -63,7 +63,10 @@ const LandingLayout = ({ children, pathname }) => (
           ]}
         />
 
-        <LandingNavigation />
+        <LandingNavigation
+          segmentName={segmentName}
+          segmentLogoUrl={segmentLogoUrl}
+        />
 
         <main>{children}</main>
 

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const LandingNavigation = () => (
+const LandingNavigation = ({ segmentName, segmentLogoUrl }) => (
   <div className="landing-navigation py-2">
     <div className="container">
       <div className="row">
@@ -14,8 +14,8 @@ const LandingNavigation = () => (
 
         <div className="col d-none d-md-flex justify-content-center align-items-center">
           <img
-            src="https://www.coolworking.fr/wp-content/uploads/2013/03/logo-horizontal-fr-400x69.png"
-            alt="Coolworking"
+            src={segmentLogoUrl}
+            alt={segmentName}
             className="max-height-50px"
           />
         </div>
