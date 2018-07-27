@@ -9,13 +9,27 @@ class CoolworkingPage extends Component {
   constructor(props) {
     super(props)
 
-    const drivyParams =
-      'instant_bookable=yes&seats_min=5&age_max=5&address_source=google&only_responsive=true&country_scope=FR&latitude=44.8435491&car_types%5B%5D=city&longitude=-0.5734009999999898&car_options%5B%5D=air_conditioning&car_options%5B%5D=cruise_control&address=9+Rue+de+Cond%C3%A9%2C+Bordeaux%2C+France&city_display_name=Bordeaux&is_open%5B%5D=automatic'
+    const drivySearchParams = new URLSearchParams({
+      address: '9 Rue de Condé, Bordeaux, France',
+      address_source: 'google',
+      latitude: 44.8435491,
+      longitude: -0.5734009999999898,
+      city_display_name: 'Bordeaux',
+      country_scope: 'FR',
+      instant_bookable: 'yes',
+      'is_open[]': 'automatic',
+      'car_types[]': 'city',
+      only_responsive: true,
+      seats_min: 5,
+      age_max: 5,
+      'car_options[]': 'air_conditioning',
+    })
+    drivySearchParams.append('car_options[]', 'cruise_control')
 
     this.state = {
       address: '9 Rue de Condé, Bordeaux, France',
-      drivyUrl: 'https://www.drivy.com/search',
-      drivyParams,
+      drivySearchUrl: 'https://www.drivy.com/search',
+      drivySearchParams,
       logoUrl:
         'https://www.coolworking.fr/wp-content/uploads/2013/03/logo-horizontal-fr-400x69.png',
       oneClickSearchData: this.getOneClickSearchData(new Date(2018, 8, 1)),
@@ -87,7 +101,9 @@ class CoolworkingPage extends Component {
   renderOneClickSearchButton({ dateParams, linkText }) {
     return (
       <a
-        href={`${this.state.drivyUrl}?${this.state.drivyParams}&${dateParams}`}
+        href={`${
+          this.state.drivySearchUrl
+        }?${this.state.drivySearchParams.toString()}&${dateParams}`}
         className="btn btn-warning"
         target="drivy"
       >
@@ -197,7 +213,9 @@ class CoolworkingPage extends Component {
                 <div className="col-12 col-sm-6 col-lg-7 col-xl-6">
                   <div className="text-center">
                     <a
-                      href={`${this.state.drivyUrl}?${this.state.urlParams}`}
+                      href={`${this.state.drivySearchUrl}?${
+                        this.state.urlParams
+                      }`}
                       className="btn btn-warning"
                       target="drivy"
                     >
