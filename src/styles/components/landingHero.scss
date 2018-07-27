@@ -1,16 +1,24 @@
-.homepage_hero {
+.landing-hero {
   position: relative;
   padding-top: 96px;
   padding-bottom: 48px;
-  -webkit-box-ordinal-group: 1;
-  -webkit-order: 0;
-  -ms-flex-order: 0;
   order: 0;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAgAAZABkAAD/2wCEABMPDxcRFyUWFiUvJB0kLywkIyMkLDoyMjIyMjpDPT09PT09Q0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0MBFBcXHhoeJBgYJDMkHiQzQjMpKTNCQ0I+Mj5CQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ//AABEIAA0AFAMBIgACEQEDEQH/xABeAAADAQEAAAAAAAAAAAAAAAAAAQMCBRAAAQMEAwAAAAAAAAAAAAAAAAECAxESEzEjQmEBAQEBAAAAAAAAAAAAAAAAAAEAAhEBAQADAAAAAAAAAAAAAAAAAAERITH/2gAMAwEAAhEDEQA/AIRRJsUzVqQTJ1NtyXJeGIrwsTtgdHjt9AdMP//Z');
+  background-image: url(https://d3d350cu3obeqo.cloudfront.net/assets/pages/homepage/background/oct_2017_left_hand_drive-792cced3ef54a3d2cf751f3b57b60ee4e4164eed88578818d3b7a3cb32a96000.jpg);
   color: $white;
+  .background-shape {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
   h2,
   p {
     text-shadow: 0 3px 20px rgba(0, 0, 0, 0.3);
@@ -18,37 +26,21 @@
 }
 
 @media (min-width: 768px) {
-  .homepage_hero {
+  .landing-hero {
     padding-top: 192px;
   }
 }
 
-.homepage_hero {
-  background-image: url(https://d3d350cu3obeqo.cloudfront.net/assets/pages/homepage/background/oct_2017_left_hand_drive-792cced3ef54a3d2cf751f3b57b60ee4e4164eed88578818d3b7a3cb32a96000.jpg);
-}
-
 @media (max-width: 991px) {
-  .homepage_hero {
+  .landing-hero {
     background-image: url(https://d3d350cu3obeqo.cloudfront.net/assets/pages/homepage/background/oct_2017_ipad_left_hand_drive-8fafc9da6d4b61fdea18590e8371c666d9c4aaa88028de4ac04e602f069ff948.jpg);
   }
 }
 
 @media (max-width: 767px) {
-  .homepage_hero {
+  .landing-hero {
     background-image: url(https://d3d350cu3obeqo.cloudfront.net/assets/pages/homepage/background/oct_2017_mobile_left_hand_drive-267df70725e9f2f7624188ba2b7a378db552119c7fa68a1a8b88fccac897b5db.jpg);
     background-position: center top;
     background-size: cover;
-  }
-}
-
-.background_shape {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  svg {
-    width: 100%;
-    height: 100%;
   }
 }
