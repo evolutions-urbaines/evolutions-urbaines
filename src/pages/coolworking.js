@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import URLSearchParams from 'url-search-params'
 
 import moment from '../vendor/moment'
 
