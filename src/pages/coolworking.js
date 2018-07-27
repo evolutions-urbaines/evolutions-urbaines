@@ -54,7 +54,8 @@ class CoolworkingPage extends Component {
         linkText: momentCalculatedDate.calendar(null, {
           sameDay: '[Cet] a',
           nextDay: '[Demain] a',
-          nextWeek: 'dddd D a',
+          nextWeek: 'dddd Do a',
+          sameElse: 'Do MMM a',
         }),
       })
     })
@@ -74,7 +75,8 @@ class CoolworkingPage extends Component {
         linkText: momentCalculatedDate.calendar(null, {
           sameDay: "[Aujourd'hui]",
           nextDay: '[Demain]',
-          nextWeek: 'dddd D',
+          nextWeek: 'dddd Do',
+          sameElse: 'Do MMMM',
         }),
       })
     })

@@ -1,7 +1,7 @@
 import React from 'react'
 
 const LandingNavigation = () => (
-  <div className="py-2">
+  <div className="landing-navigation py-2">
     <div className="container d-flex align-items-center justify-content-between">
       <div className="d-flex align-items-center children-mx-3">
         <h4 className="mb-0">
@@ -13,6 +13,7 @@ const LandingNavigation = () => (
       <img
         src="https://www.coolworking.fr/wp-content/uploads/2013/03/logo-horizontal-fr-400x69.png"
         alt="Coolworking"
+        className="max-height-50px"
       />
       <div className="d-flex align-items-center children-mx-3">
         <span>Nouveau ?</span>
