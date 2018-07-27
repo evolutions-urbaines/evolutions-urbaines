@@ -15,7 +15,7 @@ import Footer from './footer'
 const LandingLayout = ({ children, pathname }) => (
   <StaticQuery
     query={graphql`
-      query SiteTitleQuery {
+      query LandingTitleQuery {
         site {
           siteMetadata {
             name
