@@ -1,14 +1,12 @@
 import React, { Component } from 'react'
-import URLSearchParams from 'url-search-params'
+import { URL, URLSearchParams } from 'whatwg-url'
 
 import moment from '../vendor/moment'
 
 class OneClickSearch extends Component {
   state = {
     drivySearchUrl: 'https://www.drivy.com/search',
-    drivySearchParams: this.getDrivySearchParams(
-      this.props.drivyAddressSearchUrl
-    ),
+    drivySearchParams: this.getDrivySearchParams(),
     oneClickSearchData: this.getOneClickSearchData(
       moment()
         .add(1, 'month')
@@ -22,17 +20,16 @@ class OneClickSearch extends Component {
     })
   }
 
-  getDrivySearchParams(searchUrl) {
-    const url = new URL(searchUrl)
-    const searchParams = new URLSearchParams(url.search)
+  getDrivySearchParams() {
+    const url = new URL(this.props.drivyAddressSearchUrl)
 
     const drivySearchParams = new URLSearchParams({
-      address: searchParams.get('address'),
-      latitude: searchParams.get('latitude'),
-      longitude: searchParams.get('longitude'),
-      city_display_name: searchParams.get('city_display_name'),
-      country_scope: searchParams.get('country_scope'),
-      address_source: searchParams.get('address_source') || 'google',
+      address: url.searchParams.get('address'),
+      latitude: url.searchParams.get('latitude'),
+      longitude: url.searchParams.get('longitude'),
+      city_display_name: url.searchParams.get('city_display_name'),
+      country_scope: url.searchParams.get('country_scope'),
+      address_source: url.searchParams.get('address_source') || 'google',
       instant_bookable: 'yes',
       'is_open[]': 'automatic',
       'car_types[]': 'city',
@@ -49,8 +46,8 @@ class OneClickSearch extends Component {
   getOneClickSearchData(momentDate = moment()) {
     const steps = [1, 2, 3]
 
+    const momentDateIsPM = momentDate.hours() > 11
     const halfDays = steps.map(i => {
-      const momentDateIsPM = momentDate.hours() > 11
       const momentCalculatedDate = momentDate
         .businessAdd(Math.trunc((i + momentDateIsPM) / 2))
         .add(12 * (i % 2) * !momentDateIsPM, 'hours')
