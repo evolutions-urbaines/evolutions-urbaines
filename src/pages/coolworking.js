@@ -8,7 +8,7 @@ const CoolworkingPage = ({
   segmentName = 'Coolworking',
   segmentAroundExpression = 'du Coolworking',
   segmentLogoUrl = 'https://www.coolworking.fr/wp-content/uploads/2013/03/logo-horizontal-fr-400x69.png',
-  address = '9 Rue de Condé, Bordeaux, France',
+  drivyAddressSearchUrl = 'https://www.drivy.com/search?address_source=google&only_responsive=true&country_scope=FR&latitude=44.8435491&longitude=-0.57340099999999&page=1&address=9+Rue+de+Cond%C3%A9%2C+Bordeaux%2C+France&city_display_name=Bordeaux',
 }) => (
   <LandingLayout segmentName={segmentName} segmentLogoUrl={segmentLogoUrl}>
     <LandingHero>
@@ -21,7 +21,7 @@ const CoolworkingPage = ({
         </div>
 
         <div className="mb-4">
-          <OneClickSearch address={address} />
+          <OneClickSearch drivyAddressSearchUrl={drivyAddressSearchUrl} />
         </div>
 
         <p className="h5 font-weight-normal text-right">

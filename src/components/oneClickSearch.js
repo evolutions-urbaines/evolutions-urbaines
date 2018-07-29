@@ -6,7 +6,9 @@ import moment from '../vendor/moment'
 class OneClickSearch extends Component {
   state = {
     drivySearchUrl: 'https://www.drivy.com/search',
-    drivySearchParams: this.getDrivySearchParams(),
+    drivySearchParams: this.getDrivySearchParams(
+      this.props.drivyAddressSearchUrl
+    ),
     oneClickSearchData: this.getOneClickSearchData(
       moment()
         .add(1, 'month')
@@ -20,15 +22,17 @@ class OneClickSearch extends Component {
     })
   }
 
-  getDrivySearchParams() {
+  getDrivySearchParams(searchUrl) {
+    const url = new URL(searchUrl)
+    const searchParams = new URLSearchParams(url.search)
+
     const drivySearchParams = new URLSearchParams({
-      address:
-        '9 Rue de Condé, Bordeaux, France' || 'Quinconces, Bordeaux, France',
-      latitude: 44.8435491 || 44.8439848,
-      longitude: -0.5734009999999898 || -0.573847600000022,
-      city_display_name: 'Bordeaux' || 'Bordeaux',
-      country_scope: 'FR',
-      address_source: 'google',
+      address: searchParams.get('address'),
+      latitude: searchParams.get('latitude'),
+      longitude: searchParams.get('longitude'),
+      city_display_name: searchParams.get('city_display_name'),
+      country_scope: searchParams.get('country_scope'),
+      address_source: searchParams.get('address_source') || 'google',
       instant_bookable: 'yes',
       'is_open[]': 'automatic',
       'car_types[]': 'city',
@@ -97,7 +101,7 @@ class OneClickSearch extends Component {
         href={`${this.state.drivySearchUrl}?${
           this.state.drivySearchParams
         }&${dateParams}`}
-        className="btn btn-warning"
+        className="btn btn-warning text-capitalize-one"
         target="drivy"
       >
         {dateDisplay}
@@ -156,8 +160,10 @@ class OneClickSearch extends Component {
           <div className="col-12 col-sm-6 col-lg-7 col-xl-6">
             <div className="text-center">
               <a
-                href={`${this.state.drivySearchUrl}?${this.state.urlParams}`}
-                className="btn btn-warning"
+                href={`${this.state.drivySearchUrl}?${
+                  this.state.drivySearchParams
+                }`}
+                className="btn btn-warning text-capitalize-one"
                 target="drivy"
               >
                 Autres dates
