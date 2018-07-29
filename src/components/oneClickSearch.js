@@ -109,7 +109,7 @@ class OneClickSearch extends Component {
   renderOneClickSearchSection(oneClickSearchDays) {
     return oneClickSearchDays.map(day => {
       return (
-        <div key={day.dateDisplay} className="col-12 col-lg-4">
+        <div key={day.dateDisplay} className="col-12 col-lg-4 py-1">
           {this.renderOneClickSearchButton(day)}
         </div>
       )
@@ -155,7 +155,7 @@ class OneClickSearch extends Component {
         <hr />
         <div className="row align-items-center">
           <div className="col-12 col-sm-6 col-lg-7 col-xl-6">
-            <div className="text-center">
+            <div className="text-center py-1">
               <a
                 href={`${this.state.drivySearchUrl}?${
                   this.state.drivySearchParams

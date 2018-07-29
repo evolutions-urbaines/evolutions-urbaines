@@ -24,12 +24,25 @@ const CoolworkingPage = ({
           <OneClickSearch drivyAddressSearchUrl={drivyAddressSearchUrl} />
         </div>
 
-        <p className="h5 font-weight-normal text-right">
+        <p className="h5 font-weight-normal text-center text-lg-right">
           Voitures en autopartage proposées par Evolutions Urbaines sur la
-          plateforme Drivy
+          plateforme Drivy
         </p>
       </div>
     </LandingHero>
+    <div className="container">
+      <div className="row my-3 align-items-stretch text-center font-weight-bold h5">
+        <div className="col-12 col-md py-1 d-flex justify-content-center align-items-center">
+          3 × Renault Clio neuve aux Quinconces
+        </div>
+        <div className="col-12 col-md py-1 d-flex justify-content-center align-items-center border-md-left">
+          Libre-service avec ouverture par smartphone
+        </div>
+        <div className="col-12 col-md py-1 d-flex justify-content-center align-items-center border-md-left">
+          Assurance et assistance 24h/24 incluses
+        </div>
+      </div>
+    </div>
   </LandingLayout>
 )
 
