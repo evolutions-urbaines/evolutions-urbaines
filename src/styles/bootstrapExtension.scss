@@ -1,3 +1,7 @@
+.bg-steel {
+  background-color: #f7f9f9;
+}
+
 .children-mx-2 {
   & > * {
     margin-left: 0.25rem;
@@ -27,8 +31,17 @@
   max-height: 50px;
 }
 
+.shadow-steel {
+  position: relative;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+}
+
 .text-capitalize-one::first-letter {
   text-transform: uppercase;
+}
+
+.text-decoration-none:hover {
+  text-decoration: none;
 }
 
 @each $breakpoint in map-keys($grid-breakpoints) {
