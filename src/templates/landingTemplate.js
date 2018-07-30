@@ -59,7 +59,7 @@ const LandingTemplate = ({ data }) => {
           <h3>3 Renault Clio neuves aux Quinconces</h3>
           <p>Evolutions Urbaines vous les propose sur la plateforme Drivy !</p>
           <div className="row">
-            <div className="col-12 col-md py-1">
+            <div className="col-12 col-md-6 col-lg-4 py-1">
               <CarCard
                 carName="Renault Clio neuve 315DC"
                 carUrl="https://www.drivy.com/location-voiture/bordeaux/renault-clio-350543"
@@ -72,7 +72,7 @@ const LandingTemplate = ({ data }) => {
               />
             </div>
 
-            <div className="col-12 col-md py-1">
+            <div className="col-12 col-md-6 col-lg-4 py-1">
               <CarCard
                 carName="Renault Clio neuve 86DD"
                 carUrl="https://www.drivy.com/location-voiture/bordeaux/renault-clio-350554"
@@ -85,7 +85,7 @@ const LandingTemplate = ({ data }) => {
               />
             </div>
 
-            <div className="col-12 col-md py-1">
+            <div className="col-12 col-md-6 col-lg-4 py-1">
               <CarCard
                 carName="Renault Clio neuve 77DD"
                 carUrl="https://www.drivy.com/location-voiture/bordeaux/renault-clio-350552"

@@ -98,7 +98,7 @@ class OneClickSearch extends Component {
         href={`${this.state.drivySearchUrl}?${
           this.state.drivySearchParams
         }&${dateParams}`}
-        className="btn btn-warning text-capitalize-one"
+        className="btn btn-block btn-warning text-capitalize-one text-truncate"
         target="drivy"
       >
         {dateDisplay}
@@ -120,6 +120,14 @@ class OneClickSearch extends Component {
     return (
       <>
         <div className="row align-items-center">
+          <div className="col-12 col-sm-6 col-lg-5 col-xl-6">
+            <div className="h3 mb-sm-0 text-center text-lg-left">
+              Demi-journée <br className="d-xl-none" />
+              <span className="badge badge-pill badge-light font-weight-normal">
+                à partir de 28 €
+              </span>
+            </div>
+          </div>
           <div className="col-12 col-sm-6 col-lg-7 col-xl-6">
             <div className="row text-center">
               {this.renderOneClickSearchSection(
@@ -127,16 +135,17 @@ class OneClickSearch extends Component {
               )}
             </div>
           </div>
-          <div className="col-12 col-sm-6 col-lg-5 col-xl-6">
-            <div className="h3 mb-0">
-              <span className="badge badge-light font-weight-normal">
-                à partir de 28 €
-              </span>
-            </div>
-          </div>
         </div>
         <hr />
         <div className="row align-items-center">
+          <div className="col-12 col-sm-6 col-lg-5 col-xl-6">
+            <div className="h3 mb-sm-0 text-center text-lg-left">
+              Journée avec 200 km inclus <br className="d-xl-none" />
+              <span className="badge badge-pill badge-light font-weight-normal text-right">
+                à partir de 40 €
+              </span>
+            </div>
+          </div>
           <div className="col-12 col-sm-6 col-lg-7 col-xl-6">
             <div className="row text-center">
               {this.renderOneClickSearchSection(
@@ -144,34 +153,28 @@ class OneClickSearch extends Component {
               )}
             </div>
           </div>
-          <div className="col-12 col-sm-6 col-lg-5 col-xl-6">
-            <div className="h3 mb-0">
-              <span className="badge badge-light font-weight-normal">
-                à partir de 40 € avec 200 km inclus
-              </span>
-            </div>
-          </div>
         </div>
         <hr />
         <div className="row align-items-center">
+          <div className="col-12 col-sm-6 col-lg-5 col-xl-6">
+            <div className="h3 mb-sm-0 text-center text-lg-left">
+              Autres dates <br className="d-xl-none" />
+              <span className="badge badge-pill badge-light font-weight-normal">
+                tarif dégressif
+              </span>
+            </div>
+          </div>
           <div className="col-12 col-sm-6 col-lg-7 col-xl-6">
             <div className="text-center py-1">
               <a
                 href={`${this.state.drivySearchUrl}?${
                   this.state.drivySearchParams
                 }`}
-                className="btn btn-warning text-capitalize-one"
+                className="btn btn-block btn-warning text-capitalize-one"
                 target="drivy"
               >
-                Autres dates
+                Rechercher sur Drivy
               </a>
-            </div>
-          </div>
-          <div className="col-12 col-sm-6 col-lg-5 col-xl-6">
-            <div className="h3 mb-0">
-              <span className="badge badge-light font-weight-normal">
-                tarif dégressif
-              </span>
             </div>
           </div>
         </div>

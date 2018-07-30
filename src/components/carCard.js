@@ -35,7 +35,7 @@ const CarCard = ({
           </span>
         </div>
         <div className="car_card__price">
-          <div className="card_card__price_value">{carPrice}</div>
+          <div className="card_card__price_value">{carPrice}€</div>
           <div className="card_card__price_label">/ jour</div>
         </div>
       </div>
