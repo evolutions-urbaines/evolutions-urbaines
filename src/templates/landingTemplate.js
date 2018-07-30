@@ -11,7 +11,7 @@ const LandingTemplate = ({ data }) => {
 
   return (
     <LandingLayout
-      segmentName={frontmatter.segmentName}
+      segmentName={frontmatter.title}
       segmentLogoUrl={frontmatter.segmentLogoUrl}
     >
       <LandingHero>
@@ -110,7 +110,7 @@ export const landingQuery = graphql`
   query($slug: String!) {
     markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       frontmatter {
-        segmentName
+        title
         segmentAroundExpression
         segmentLogoUrl
         drivyAddressSearchUrl

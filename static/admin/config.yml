@@ -21,7 +21,7 @@ collections:
     create: true
     fields:
       - { name: slug, label: Slug }
-      - { name: segmentName, label: Segment Name }
+      - { name: title, label: Title · Segment Name }
       - { name: segmentAroundExpression, label: Segment "around" expression }
       - { name: segmentLogoUrl, label: Segment Logo URL }
       - { name: drivyAddressSearchUrl, label: Drivy address search URL }
