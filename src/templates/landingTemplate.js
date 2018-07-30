@@ -18,8 +18,8 @@ const LandingTemplate = ({ data }) => {
         <div className="container position-relative">
           <div className="mb-5">
             <h2 className="h1">
-              Des voitures autour {frontmatter.segmentAroundExpression}, prêtes
-              à partir
+              Des voitures {frontmatter.segmentAroundExpression}, prêtes à
+              partir
             </h2>
             <h2 className="h3">Pour quelques heures ou quelques jours</h2>
           </div>
