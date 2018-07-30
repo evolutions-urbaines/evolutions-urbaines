@@ -11,7 +11,7 @@ collections:
     folder: src/pages/articles
     create: true
     fields:
-      - { name: path, label: Path }
+      - { name: slug, label: Slug }
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
       - { name: body, label: Body, widget: markdown }
@@ -20,7 +20,8 @@ collections:
     folder: src/pages/landing
     create: true
     fields:
-      - { name: path, label: Path }
-      - { name: date, label: Date, widget: date }
-      - { name: title, label: Title }
-      - { name: body, label: Body, widget: markdown }
+      - { name: slug, label: Slug }
+      - { name: segmentName, label: Segment Name }
+      - { name: segmentAroundExpression, label: Segment "around" expression }
+      - { name: segmentLogoUrl, label: Segment Logo URL }
+      - { name: drivyAddressSearchUrl, label: Drivy address search URL }

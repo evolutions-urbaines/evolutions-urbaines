@@ -20,6 +20,8 @@
     "gatsby-plugin-react-helmet": "next",
     "gatsby-plugin-sass": "next",
     "gatsby-plugin-sitemap": "next",
+    "gatsby-source-filesystem": "next",
+    "gatsby-transformer-remark": "next",
     "moment": "^2.22.2",
     "moment-business-days": "^1.0.6",
     "netlify-cms": "^1.9.3",

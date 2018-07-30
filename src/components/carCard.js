@@ -26,11 +26,11 @@ const CarCard = ({
             <li>{carYear}</li>
           </ul>
           <span className="car_card__ratings">
-            <i class="fas fa-star" />
-            <i class="fas fa-star" />
-            <i class="fas fa-star" />
-            <i class="fas fa-star" />
-            <i class="fas fa-star" />
+            <i className="fas fa-star" />
+            <i className="fas fa-star" />
+            <i className="fas fa-star" />
+            <i className="fas fa-star" />
+            <i className="fas fa-star" />
             <span className="car_card__ratings_count">{carRatingsCount}</span>
           </span>
         </div>

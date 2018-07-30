@@ -3,7 +3,8 @@ module.exports = {
     name: 'Evolutions Urbaines',
     title: 'Des véhicules en autopartage',
     description: 'Des véhicules en autopartage',
-    keywords: 'evolutions, urbaines, autopartage',
+    keywords:
+      'evolutions, urbaines, autopartage, auto, partage, drivy, open, libre, service, location, particuliers, professionnels',
     siteUrl: 'https://evolutions-urbaines.fr',
   },
   plugins: [
@@ -24,5 +25,13 @@ module.exports = {
     },
     'gatsby-plugin-purgecss',
     'gatsby-plugin-sitemap',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/pages/landing`,
+        name: 'landing',
+      },
+    },
+    'gatsby-transformer-remark',
   ],
 }
