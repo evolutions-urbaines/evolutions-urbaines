@@ -1,10 +1,11 @@
 module.exports = {
   siteMetadata: {
     name: 'Evolutions Urbaines',
-    title: 'Des véhicules en autopartage',
-    description: 'Des véhicules en autopartage',
+    title: 'Des voitures autour de vous, prêtes à partir',
+    description:
+      'Des voitures autour de vous, prêtes à partir · Pour quelques heures ou quelques jours',
     keywords:
-      'evolutions, urbaines, autopartage, auto, partage, drivy, open, libre, service, location, particuliers, professionnels',
+      'evolutions, urbaines, autopartage, auto, partage, drivy, open, libre, service, location, particulier, particuliers, professionnel, professionnels, voiture, voitures, véhicule, véhicules',
     siteUrl: 'https://evolutions-urbaines.fr',
   },
   plugins: [

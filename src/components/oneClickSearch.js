@@ -116,7 +116,47 @@ class OneClickSearch extends Component {
     })
   }
 
-  render() {
+  renderLeisure() {
+    return (
+      <>
+        <div className="row align-items-center">
+          <div className="col-12 col-sm-6 col-lg-7">
+            <div className="h3 mb-sm-0 text-center text-lg-left">
+              Demi-journée <br className="d-lg-none" />
+              <span className="badge badge-pill badge-light font-weight-normal">
+                à partir de 28 €
+              </span>
+            </div>
+
+            <hr />
+
+            <div className="h3 mb-sm-0 text-center text-lg-left">
+              Journée avec 200 km inclus <br className="d-lg-none" />
+              <span className="badge badge-pill badge-light font-weight-normal text-right">
+                à partir de 40 €
+              </span>
+            </div>
+          </div>
+
+          <div className="col-12 col-sm-6 col-lg-5">
+            <div className="text-center py-1">
+              <a
+                href={`${this.state.drivySearchUrl}?${
+                  this.state.drivySearchParams
+                }`}
+                className="btn btn-block btn-warning text-capitalize-one"
+                target="drivy"
+              >
+                Rechercher sur Drivy
+              </a>
+            </div>
+          </div>
+        </div>
+      </>
+    )
+  }
+
+  renderBusiness() {
     return (
       <>
         <div className="row align-items-center">
@@ -180,6 +220,15 @@ class OneClickSearch extends Component {
         </div>
       </>
     )
+  }
+
+  render() {
+    switch (this.props.category) {
+      case 'business':
+        return this.renderBusiness()
+      default:
+        return this.renderLeisure()
+    }
   }
 }
 export default OneClickSearch

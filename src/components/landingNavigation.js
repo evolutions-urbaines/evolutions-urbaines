@@ -6,19 +6,23 @@ const LandingNavigation = ({ segmentName, segmentLogoUrl }) => (
       <div className="row">
         <div className="col d-flex align-items-center children-mx-3">
           <h4 className="mb-0">
-            Evolutions<br />Urbaines
+            Evolutions
+            <br />
+            Urbaines
           </h4>
           <span className="h5 mb-0 d-none d-lg-block">+</span>
           <h4 className="mb-0 d-none d-lg-block">Drivy</h4>
         </div>
 
-        <div className="col d-none d-md-flex justify-content-center align-items-center">
-          <img
-            src={segmentLogoUrl}
-            alt={segmentName}
-            className="max-height-50px"
-          />
-        </div>
+        {typeof segmentLogoUrl !== 'undefined' && (
+          <div className="col d-none d-md-flex justify-content-center align-items-center">
+            <img
+              src={segmentLogoUrl}
+              alt={segmentName}
+              className="max-height-50px"
+            />
+          </div>
+        )}
 
         <div className="col d-flex justify-content-end align-items-center children-mx-3">
           <span className="d-none d-lg-block">Nouveau ?</span>

@@ -12,7 +12,7 @@ import Footer from './footer'
 // import ogImage from '../images/ogImage.jpg';
 // import ogImageSquare from '../images/ogImageSquare.jpg';
 
-const LandingLayout = ({ children, segmentName, segmentLogoUrl }) => (
+const LandingLayout = ({ children, pathname, segmentName, segmentLogoUrl }) => (
   <StaticQuery
     query={graphql`
       query LandingTitleQuery {
@@ -31,48 +31,57 @@ const LandingLayout = ({ children, segmentName, segmentLogoUrl }) => (
       site: {
         siteMetadata: { name, title, description, keywords, siteUrl },
       },
-    }) => (
-      <>
-        <Helmet
-          htmlAttributes={{ lang: 'fr' }}
-          titleTemplate={`${name} · %s`}
-          defaultTitle={`${name} · ${title}`}
-          meta={[
-            {
-              name: 'description',
-              content: description,
-            },
-            { name: 'keywords', content: keywords },
-            { property: 'og:type', content: 'website' },
-            { property: 'og:site_name', content: name },
-            { property: 'og:url', content: siteUrl },
-            {
-              property: 'og:title',
-              content: `${name} · ${title}`,
-            },
-            {
-              property: 'og:description',
-              content: description,
-            },
-            // { property: 'og:image', content: ogImageUrl },
-            // { property: 'og:image:width', content: '2400' },
-            // { property: 'og:image:height', content: '1260' },
-            // { property: 'og:image', content: ogImageSquareUrl },
-            // { property: 'og:image:width', content: '600' },
-            // { property: 'og:image:height', content: '600' },
-          ]}
-        />
+    }) => {
+      const allKeywords =
+        typeof segmentName !== 'undefined'
+          ? `${segmentName.toLowerCase().replace(' ', ', ')}, ${keywords}`
+          : keywords
+      return (
+        <>
+          <Helmet
+            htmlAttributes={{ lang: 'fr' }}
+            titleTemplate={`${name} · %s`}
+            defaultTitle={`${name} · ${title}`}
+            meta={[
+              {
+                name: 'description',
+                content: description,
+              },
+              {
+                name: 'keywords',
+                content: allKeywords,
+              },
+              { property: 'og:type', content: 'website' },
+              { property: 'og:site_name', content: name },
+              { property: 'og:url', content: `${siteUrl}${pathname}` },
+              {
+                property: 'og:title',
+                content: `${name} · ${title}`,
+              },
+              {
+                property: 'og:description',
+                content: description,
+              },
+              // { property: 'og:image', content: ogImageUrl },
+              // { property: 'og:image:width', content: '2400' },
+              // { property: 'og:image:height', content: '1260' },
+              // { property: 'og:image', content: ogImageSquareUrl },
+              // { property: 'og:image:width', content: '600' },
+              // { property: 'og:image:height', content: '600' },
+            ]}
+          />
 
-        <LandingNavigation
-          segmentName={segmentName}
-          segmentLogoUrl={segmentLogoUrl}
-        />
+          <LandingNavigation
+            segmentName={segmentName}
+            segmentLogoUrl={segmentLogoUrl}
+          />
 
-        <main>{children}</main>
+          <main>{children}</main>
 
-        <Footer />
-      </>
-    )}
+          <Footer />
+        </>
+      )
+    }}
   />
 )
 

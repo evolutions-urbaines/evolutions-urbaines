@@ -2,19 +2,20 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import LandingLayout from '../components/landingLayout'
-import LandingHero from '../components/landingHero'
+import Hero from '../components/hero'
 import OneClickSearch from '../components/oneClickSearch'
 import CarCard from '../components/carCard'
 
-const LandingTemplate = ({ data }) => {
+const LandingTemplate = ({ data, location }) => {
   const { frontmatter } = data.markdownRemark
 
   return (
     <LandingLayout
+      pathname={location.pathname}
       segmentName={frontmatter.title}
       segmentLogoUrl={frontmatter.segmentLogoUrl}
     >
-      <LandingHero>
+      <Hero category="business">
         <div className="container position-relative">
           <div className="mb-5">
             <h2 className="h1">
@@ -26,6 +27,7 @@ const LandingTemplate = ({ data }) => {
 
           <div className="mb-4">
             <OneClickSearch
+              category="business"
               drivyAddressSearchUrl={frontmatter.drivyAddressSearchUrl}
             />
           </div>
@@ -35,7 +37,7 @@ const LandingTemplate = ({ data }) => {
             plateforme Drivy
           </p>
         </div>
-      </LandingHero>
+      </Hero>
 
       <div className="shadow-steel">
         <div className="container">
@@ -44,8 +46,7 @@ const LandingTemplate = ({ data }) => {
               Libre-service avec ouverture par smartphone
             </div>
             <div className="col-12 col-md py-1 d-flex justify-content-center align-items-center border-md-left">
-              Voitures neuves, à votre image pour vos déplacements
-              professionnels
+              Voitures neuves, à votre image en déplacement professionnel
             </div>
             <div className="col-12 col-md py-1 d-flex justify-content-center align-items-center border-md-left">
               Assurance et assistance 24h/24 incluses
@@ -67,7 +68,7 @@ const LandingTemplate = ({ data }) => {
                 carLocation="Bordeaux Quinconces"
                 carYear="2018"
                 carRating="5"
-                carRatingsCount="7"
+                carRatingsCount="8"
                 carPrice="40"
               />
             </div>
@@ -80,7 +81,7 @@ const LandingTemplate = ({ data }) => {
                 carLocation="Bordeaux Quinconces"
                 carYear="2018"
                 carRating="5"
-                carRatingsCount="4"
+                carRatingsCount="6"
                 carPrice="40"
               />
             </div>
