@@ -1,6 +1,7 @@
 ---
 slug: wigi
 title: WIGI
+segmentCategory: business
 segmentAroundExpression: autour de WIGI
 segmentLogoUrl: 'http://wigi-coworking.com/wp-content/uploads/logobleu_250_ombre.png'
 drivyAddressSearchUrl: >-
