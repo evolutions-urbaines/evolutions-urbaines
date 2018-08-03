@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import LandingLayout from '../components/landingLayout'
+import Layout from '../components/layout'
 import Hero from '../components/hero'
 import OneClickSearch from '../components/oneClickSearch'
 import CarCard from '../components/carCard'
@@ -10,12 +10,12 @@ const LandingTemplate = ({ data, location }) => {
   const { frontmatter } = data.markdownRemark
 
   return (
-    <LandingLayout
+    <Layout
       pathname={location.pathname}
       segmentName={frontmatter.title}
       segmentLogoUrl={frontmatter.segmentLogoUrl}
     >
-      <Hero category="business">
+      <Hero segmentCategory={frontmatter.segmentCategory}>
         <div className="container position-relative">
           <div className="mb-5">
             <h2 className="h1">
@@ -25,9 +25,9 @@ const LandingTemplate = ({ data, location }) => {
             <h2 className="h3">Pour quelques heures ou quelques jours</h2>
           </div>
 
-          <div className="mb-4">
+          <div className="mb-5">
             <OneClickSearch
-              category="business"
+              segmentCategory={frontmatter.segmentCategory}
               drivyAddressSearchUrl={frontmatter.drivyAddressSearchUrl}
             />
           </div>
@@ -43,7 +43,7 @@ const LandingTemplate = ({ data, location }) => {
         <div className="container">
           <div className="row py-3 align-items-stretch text-center font-weight-bold h5 mb-0">
             <div className="col-12 col-md py-1 d-flex justify-content-center align-items-center">
-              Libre-service avec ouverture par smartphone
+              Libre-service avec ouverture par smartphone
             </div>
             <div className="col-12 col-md py-1 d-flex justify-content-center align-items-center border-md-left">
               Voitures neuves, à votre image en déplacement professionnel
@@ -101,7 +101,7 @@ const LandingTemplate = ({ data, location }) => {
           </div>
         </div>
       </div>
-    </LandingLayout>
+    </Layout>
   )
 }
 
@@ -112,6 +112,7 @@ export const landingQuery = graphql`
     markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       frontmatter {
         title
+        segmentCategory
         segmentAroundExpression
         segmentLogoUrl
         drivyAddressSearchUrl

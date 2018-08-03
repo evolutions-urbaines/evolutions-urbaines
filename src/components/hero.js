@@ -1,14 +1,17 @@
 import React from 'react'
 
-const Hero = ({ children, category }) => {
+import backgroundBusiness from '../images/backgroundBusiness.jpg'
+import backgroundLeisure from '../images/backgroundLeisure.jpg'
+
+const Hero = ({ children, segmentCategory }) => {
   const backgroundImageUrl = (category => {
     switch (category) {
       case 'business':
-        return 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6e234f70b9f742c37a8a21c8e91d28d5&auto=format&fit=crop&w=750&q=80'
+        return backgroundBusiness
       default:
-        return 'https://images.pexels.com/photos/760003/pexels-photo-760003.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
+        return backgroundLeisure
     }
-  })(category)
+  })(segmentCategory)
 
   return (
     <div

@@ -223,7 +223,7 @@ class OneClickSearch extends Component {
   }
 
   render() {
-    switch (this.props.category) {
+    switch (this.props.segmentCategory) {
       case 'business':
         return this.renderBusiness()
       default:

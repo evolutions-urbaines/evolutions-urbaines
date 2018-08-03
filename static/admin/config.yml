@@ -5,6 +5,8 @@ backend:
 media_folder: static/assets
 public_folder: assets
 
+display_url: https://evolutions-urbaines.fr
+
 collections:
   - name: articles
     label: Articles
@@ -22,6 +24,7 @@ collections:
     fields:
       - { name: slug, label: Slug }
       - { name: title, label: Title · Segment Name }
+      - { name: segmentCategory, label: Segment Category, widget: "select", options: ["business", "leisure"]}
       - { name: segmentAroundExpression, label: Segment "around" expression }
-      - { name: segmentLogoUrl, label: Segment Logo URL }
+      - { name: segmentLogoUrl, label: Segment Logo URL, required: false }
       - { name: drivyAddressSearchUrl, label: Drivy address search URL }

@@ -1,21 +1,12 @@
 import React from 'react'
 
-// import Layout from '../components/layout'
-// import Banner from '../components/banner'
-
-import LandingLayout from '../components/landingLayout'
+import Layout from '../components/layout'
 import Hero from '../components/hero'
 import OneClickSearch from '../components/oneClickSearch'
 import CarCard from '../components/carCard'
 
 const IndexPage = ({ location }) => (
-  // <Layout pathname={props.location.pathname}>
-  //   <Banner backgroundImageUrl="http://res.cloudinary.com/evolutions-urbaines/image/upload/c_fill,h_1280,w_1920/v1532259720/IMG_7681.jpg">
-  //     <h1>“ Autopartage à Bordeaux ”</h1>
-  //     <p className="display-4">Evolutions Urbaines</p>
-  //   </Banner>
-  // </Layout>
-  <LandingLayout
+  <Layout
     pathname={location.pathname}
     locationsegmentName="Evolutions Urbaines"
   >
@@ -26,7 +17,7 @@ const IndexPage = ({ location }) => (
           <h2 className="h3">Pour quelques heures ou quelques jours</h2>
         </div>
 
-        <div className="mb-4">
+        <div className="mb-5">
           <OneClickSearch drivyAddressSearchUrl="https://www.drivy.com/search?address_source=google&only_responsive=true&country_scope=FR&latitude=44.8439848&longitude=-0.573847600000022&page=1&address=Quinconces%2C+Bordeaux%2C+France&city_display_name=Bordeaux" />
         </div>
 
@@ -41,10 +32,10 @@ const IndexPage = ({ location }) => (
       <div className="container">
         <div className="row py-3 align-items-stretch text-center font-weight-bold h5 mb-0">
           <div className="col-12 col-md py-1 d-flex justify-content-center align-items-center">
-            Libre-service avec ouverture par smartphone
+            Libre-service avec ouverture par smartphone
           </div>
           <div className="col-12 col-md py-1 d-flex justify-content-center align-items-center border-md-left">
-            Voitures neuves, déplacez vous l'esprit tranquille
+            Voitures neuves, prenez la route l'esprit tranquille
           </div>
           <div className="col-12 col-md py-1 d-flex justify-content-center align-items-center border-md-left">
             Assurance et assistance 24h/24 incluses
@@ -99,7 +90,7 @@ const IndexPage = ({ location }) => (
         </div>
       </div>
     </div>
-  </LandingLayout>
+  </Layout>
 )
 
 export default IndexPage
