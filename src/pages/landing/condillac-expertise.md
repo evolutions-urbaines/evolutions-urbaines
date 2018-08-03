@@ -1,6 +1,7 @@
 ---
 slug: condillac
 title: Condillac Expertise
+segmentCategory: business
 segmentAroundExpression: aux Quinconces
 segmentLogoUrl: 'https://www.condillac-expertise.com/wp-content/uploads/logo-condillac2.png'
 drivyAddressSearchUrl: >-
