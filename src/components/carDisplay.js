@@ -17,7 +17,7 @@ const CarDisplay = () => (
             carLocation="Bordeaux Quinconces"
             carYear="2018"
             carRating="5"
-            carRatingsCount="8"
+            carRatingsCount="11"
             carPrice="40"
           />
         </div>
