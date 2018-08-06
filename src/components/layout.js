@@ -10,7 +10,7 @@ import LandingNavigation from './landingNavigation'
 import Footer from './footer'
 
 import ogImage from '../images/ogImage.jpg'
-// import ogImageSquare from '../images/ogImageSquare.jpg';
+import ogImageSquare from '../images/ogImageSquare.jpg'
 
 const Layout = ({ children, pathname, segmentName, segmentLogoUrl }) => (
   <StaticQuery
@@ -39,10 +39,10 @@ const Layout = ({ children, pathname, segmentName, segmentLogoUrl }) => (
 
       const ogImageUrl =
         process.env.NODE_ENV === 'production' ? siteUrl + ogImage : ogImage
-      // const ogImageSquareUrl =
-      //   process.env.NODE_ENV === 'production'
-      //     ? siteUrl + ogImageSquare
-      //     : ogImageSquare
+      const ogImageSquareUrl =
+        process.env.NODE_ENV === 'production'
+          ? siteUrl + ogImageSquare
+          : ogImageSquare
 
       return (
         <>
@@ -71,11 +71,11 @@ const Layout = ({ children, pathname, segmentName, segmentLogoUrl }) => (
                 content: description,
               },
               { property: 'og:image', content: ogImageUrl },
-              { property: 'og:image:width', content: '1200' },
-              { property: 'og:image:height', content: '630' },
-              // { property: 'og:image', content: ogImageSquareUrl },
-              // { property: 'og:image:width', content: '600' },
-              // { property: 'og:image:height', content: '600' },
+              { property: 'og:image:width', content: '2400' },
+              { property: 'og:image:height', content: '1260' },
+              { property: 'og:image', content: ogImageSquareUrl },
+              { property: 'og:image:width', content: '600' },
+              { property: 'og:image:height', content: '600' },
             ]}
           />
 
