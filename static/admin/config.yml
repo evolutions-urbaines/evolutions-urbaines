@@ -17,14 +17,41 @@ collections:
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
       - { name: body, label: Body, widget: markdown }
-  - name: landing
-    label: Landing Pages
+  - name: landing-business
+    label: Landing Pages · Business
     folder: src/pages/landing
     create: true
+    filter: { field: segmentCategory, value: business }
     fields:
       - { name: slug, label: Slug }
       - { name: title, label: Title · Segment Name }
-      - { name: segmentCategory, label: Segment Category, widget: "select", options: ["business", "leisure"]}
+      - { name: segmentCategory, label: Segment Category, widget: select, options: [business, leisure]}
       - { name: segmentAroundExpression, label: Segment "around" expression }
       - { name: segmentLogoUrl, label: Segment Logo URL, required: false }
       - { name: drivyAddressSearchUrl, label: Drivy address search URL }
+      - { name: segmentDrivyReferralUrl, label: Segment Drivy referral URL, required: false }
+      - { name: segmentRecommendation, label: Segment recommendation, widget: boolean }
+      - { name: segmentBackgroundUrl, label: Segment background URL, required: false }
+      - { name: segmentRepresentativePhotoUrl, label: Segment Representative photo URL, required: false }
+      - { name: segmentRepresentativeName, label: Segment Representative name, required: false }
+      - { name: segmentRepresentativeRole, label: Segment Representative role, required: false }
+      - { name: segmentRepresentativeSpeech, label: Segment Representative speech, widget: text, required: false }
+  - name: landing-leisure
+    label: Landing Pages · Leisure
+    folder: src/pages/landing
+    create: true
+    filter: { field: segmentCategory, value: leisure }
+    fields:
+      - { name: slug, label: Slug }
+      - { name: title, label: Title · Segment Name }
+      - { name: segmentCategory, label: Segment Category, widget: select, options: [business, leisure]}
+      - { name: segmentAroundExpression, label: Segment "around" expression }
+      - { name: segmentLogoUrl, label: Segment Logo URL, required: false }
+      - { name: drivyAddressSearchUrl, label: Drivy address search URL }
+      - { name: segmentDrivyReferralUrl, label: Segment Drivy referral URL, required: false }
+      - { name: segmentRecommendation, label: Segment recommendation, widget: boolean }
+      - { name: segmentBackgroundUrl, label: Segment background URL, required: false }
+      - { name: segmentRepresentativePhotoUrl, label: Segment Representative photo URL, required: false }
+      - { name: segmentRepresentativeName, label: Segment Representative name, required: false }
+      - { name: segmentRepresentativeRole, label: Segment Representative role, required: false }
+      - { name: segmentRepresentativeSpeech, label: Segment Representative speech, widget: text, required: false }
