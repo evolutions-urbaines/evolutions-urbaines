@@ -1,7 +1,7 @@
 ---
 slug: cdiscount
 title: Cdiscount
-segmentCategory: business
+segmentCategory: leisure
 segmentAroundExpression: aux Quinconces
 segmentLogoUrl: 'https://i2.cdscdn.com/RWD/header/nLogo.png'
 drivyAddressSearchUrl: >-
