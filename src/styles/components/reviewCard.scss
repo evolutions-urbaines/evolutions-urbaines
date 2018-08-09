@@ -1,0 +1,60 @@
+.review_card {
+  position: relative;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+  margin-top: 36px;
+  margin-bottom: 20px;
+  padding: 48px 24px;
+  text-align: center;
+  border-radius: 3px;
+  background-color: #fff;
+  &:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    display: block;
+    width: 3px;
+    border-top-left-radius: inherit;
+    border-bottom-left-radius: inherit;
+    content: '';
+    background-image: linear-gradient(to bottom, #00d9d9, #d8ff00);
+  }
+  &__avatar {
+    display: block;
+    width: 72px;
+    height: 72px;
+    margin-top: -84px;
+    margin-left: calc(50% - 72px / 2);
+    margin-bottom: 24px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+  }
+  &__user {
+    margin-bottom: 0;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #262959;
+  }
+  &__details {
+    margin-bottom: 0;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #50588c;
+    margin-bottom: 24px;
+  }
+  &__content {
+    margin: 0;
+    font-size: 18px;
+    line-height: 24px;
+    & strong {
+      font-weight: inherit;
+    }
+    & a {
+      color: inherit !important;
+      text-decoration: none !important;
+    }
+  }
+}
