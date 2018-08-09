@@ -35,7 +35,7 @@ collections:
       - { name: segmentRepresentativePhotoUrl, label: Segment Representative photo URL, required: false }
       - { name: segmentRepresentativeName, label: Segment Representative name, required: false }
       - { name: segmentRepresentativeRole, label: Segment Representative role, required: false }
-      - { name: segmentRepresentativeSpeech, label: Segment Representative speech, widget: text, required: false }
+      - { name: segmentRepresentativeSpeech, label: Segment Representative speech, required: false }
   - name: landing-leisure
     label: Landing Pages · Leisure
     folder: src/pages/landing
@@ -54,4 +54,4 @@ collections:
       - { name: segmentRepresentativePhotoUrl, label: Segment Representative photo URL, required: false }
       - { name: segmentRepresentativeName, label: Segment Representative name, required: false }
       - { name: segmentRepresentativeRole, label: Segment Representative role, required: false }
-      - { name: segmentRepresentativeSpeech, label: Segment Representative speech, widget: text, required: false }
+      - { name: segmentRepresentativeSpeech, label: Segment Representative speech, required: false }
