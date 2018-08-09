@@ -27,6 +27,7 @@ const Layout = ({
             name
             title
             description
+            fbAppId
             keywords
             siteUrl
           }
@@ -35,7 +36,7 @@ const Layout = ({
     `}
     render={({
       site: {
-        siteMetadata: { name, title, description, keywords, siteUrl },
+        siteMetadata: { name, title, description, fbAppId, keywords, siteUrl },
       },
     }) => {
       const allKeywords =
@@ -82,6 +83,7 @@ const Layout = ({
               { property: 'og:image', content: ogImageSquareUrl },
               { property: 'og:image:width', content: '600' },
               { property: 'og:image:height', content: '600' },
+              { property: 'fb:app_id', content: fbAppId },
             ]}
           />
 
