@@ -16,8 +16,9 @@ segmentRepresentativeName: Fabrice Jeannet
 segmentRepresentativeRole: Co-fondateur et gérant du Coolworking
 segmentRepresentativeSpeech: >-
   Génial ! Pour vos réunions professionnelles à l'extérieur, vous disposez
-  maintenant de voitures neuves à deux pas du Coolworking, sur la place des
+  maintenant de voitures neuves **à deux pas du Coolworking**, sur la place des
   Quinconces.
+
 
   Profitez-en !
 ---
