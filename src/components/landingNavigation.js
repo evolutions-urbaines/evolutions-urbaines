@@ -18,25 +18,21 @@ const LandingNavigation = ({
           <h4 className="mb-0 d-none d-lg-block">Drivy</h4>
         </div>
 
-        {typeof segmentLogoUrl !== 'undefined' &&
-          segmentLogoUrl !== null && (
-            <div className="col d-none d-md-flex justify-content-center align-items-center">
-              <img
-                src={segmentLogoUrl}
-                alt={segmentName}
-                className="max-height-50px"
-              />
-            </div>
-          )}
+        {segmentLogoUrl && (
+          <div className="col d-none d-md-flex justify-content-center align-items-center">
+            <img
+              src={segmentLogoUrl}
+              alt={segmentName}
+              className="max-height-50px"
+            />
+          </div>
+        )}
 
         <div className="col d-flex justify-content-end align-items-center children-mx-3">
           <span className="d-none d-lg-block">Nouveau ?</span>
           <a
             href={
-              (typeof segmentDrivyReferralUrl !== 'undefined' &&
-                segmentDrivyReferralUrl !== null &&
-                segmentDrivyReferralUrl) ||
-              'https://www.drivy.com/r/2039832-027'
+              segmentDrivyReferralUrl || 'https://www.drivy.com/r/2039832-027'
             }
             target="drivy"
             className="btn btn-primary"
