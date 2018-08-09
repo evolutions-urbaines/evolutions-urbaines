@@ -17,7 +17,7 @@ const CarDisplay = () => (
             carLocation="Bordeaux Quinconces"
             carYear="2018"
             carRating="5"
-            carRatingsCount="11"
+            carRatingsCount="13"
             carPrice="40"
           />
         </div>
@@ -43,7 +43,7 @@ const CarDisplay = () => (
             carLocation="Bordeaux Quinconces"
             carYear="2018"
             carRating="5"
-            carRatingsCount="7"
+            carRatingsCount="12"
             carPrice="40"
           />
         </div>
