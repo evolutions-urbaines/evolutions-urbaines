@@ -3,7 +3,7 @@ import Link from 'gatsby-link'
 
 const Footer = () => (
   <footer className="navbar navbar-expand-md navbar-dark bg-dark text-center">
-    <div className="container justify-content-center justify-content-md-between">
+    <div className="container justify-content-between">
       <div className="navbar-text text-nowrap">© Evolutions Urbaines 2018</div>
 
       <div className="navbar-nav align-items-center">
@@ -11,6 +11,16 @@ const Footer = () => (
           <Link to="/mentions-legales" className="nav-link">
             Mentions légales
           </Link>
+        </div>
+
+        <div className="nav-item px-3">
+          <a
+            className="nav-link"
+            href="https://www.facebook.com/EvolutionsUrbaines"
+            target="facebook"
+          >
+            <i className="fab fa-facebook fa-lg" />
+          </a>
         </div>
 
         <div className="nav-item px-3">
