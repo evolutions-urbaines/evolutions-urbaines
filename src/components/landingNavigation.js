@@ -1,6 +1,10 @@
 import React from 'react'
 
-const LandingNavigation = ({ segmentName, segmentLogoUrl }) => (
+const LandingNavigation = ({
+  segmentName,
+  segmentLogoUrl,
+  segmentDrivyReferralUrl,
+}) => (
   <div className="landing-navigation py-2">
     <div className="container">
       <div className="row">
@@ -28,7 +32,12 @@ const LandingNavigation = ({ segmentName, segmentLogoUrl }) => (
         <div className="col d-flex justify-content-end align-items-center children-mx-3">
           <span className="d-none d-lg-block">Nouveau ?</span>
           <a
-            href="https://www.drivy.com/r/2039832-027"
+            href={
+              (typeof segmentDrivyReferralUrl !== 'undefined' &&
+                segmentDrivyReferralUrl !== null &&
+                segmentDrivyReferralUrl) ||
+              'https://www.drivy.com/r/2039832-027'
+            }
             target="drivy"
             className="btn btn-primary"
           >

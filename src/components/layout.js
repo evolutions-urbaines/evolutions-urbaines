@@ -12,7 +12,13 @@ import Footer from './footer'
 import ogImage from '../images/ogImage.jpg'
 import ogImageSquare from '../images/ogImageSquare.jpg'
 
-const Layout = ({ children, pathname, segmentName, segmentLogoUrl }) => (
+const Layout = ({
+  children,
+  pathname,
+  segmentName,
+  segmentLogoUrl,
+  segmentDrivyReferralUrl,
+}) => (
   <StaticQuery
     query={graphql`
       query MetaQuery {
@@ -82,6 +88,7 @@ const Layout = ({ children, pathname, segmentName, segmentLogoUrl }) => (
           <LandingNavigation
             segmentName={segmentName}
             segmentLogoUrl={segmentLogoUrl}
+            segmentDrivyReferralUrl={segmentDrivyReferralUrl}
           />
 
           <main>{children}</main>
