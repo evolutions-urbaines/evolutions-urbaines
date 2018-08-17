@@ -20,6 +20,7 @@ const LandingTemplate = ({ data, location }) => {
         segmentLogoUrl: frontmatter.segmentLogoUrl,
         segmentDrivyReferralUrl: frontmatter.segmentDrivyReferralUrl,
       }}
+      skipContainer="true"
     >
       <Hero segmentCategory={frontmatter.segmentCategory}>
         <div className="container position-relative">

@@ -7,7 +7,7 @@ import USP from '../components/uSP'
 import CarDisplay from '../components/carDisplay'
 
 const IndexPage = ({ location }) => (
-  <Layout {...{ location }}>
+  <Layout {...{ location }} skipContainer="true">
     <Hero>
       <div className="container position-relative">
         <div className="mb-5">
