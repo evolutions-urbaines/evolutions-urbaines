@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 
-const LandingTemplate = ({ data, location }) => {
+const ArticleTemplate = ({ data, location }) => {
   const { frontmatter, html } = data.markdownRemark
 
   return (
@@ -21,9 +21,9 @@ const LandingTemplate = ({ data, location }) => {
   )
 }
 
-export default LandingTemplate
+export default ArticleTemplate
 
-export const landingQuery = graphql`
+export const articleQuery = graphql`
   query($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
