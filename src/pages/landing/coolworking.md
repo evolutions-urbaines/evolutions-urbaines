@@ -1,4 +1,5 @@
 ---
+templateKey: landing
 slug: coolworking
 title: Coolworking
 segmentCategory: business
@@ -19,4 +20,3 @@ segmentRepresentativeSpeech: >-
   maintenant de voitures neuves à deux pas du Coolworking, sur la place des
   Quinconces. Profitez-en !
 ---
-

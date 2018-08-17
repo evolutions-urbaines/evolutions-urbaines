@@ -88,8 +88,8 @@ const LandingTemplate = ({ data, location }) => {
 export default LandingTemplate
 
 export const landingQuery = graphql`
-  query($slug: String!) {
-    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+  query($id: String!) {
+    markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
         segmentCategory

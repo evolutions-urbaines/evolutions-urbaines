@@ -1,4 +1,5 @@
 ---
+templateKey: landing
 slug: w-in
 title: W'iN
 segmentCategory: business
@@ -8,4 +9,3 @@ segmentLogoUrl: >-
 drivyAddressSearchUrl: >-
   https://www.drivy.com/search?address_source=google&only_responsive=true&country_scope=FR&latitude=44.8438657&longitude=-0.576537400000007&page=1&address=30+All%C3%A9e+de+Tourny%2C+33000+Bordeaux%2C+France&city_display_name=Bordeaux
 ---
-

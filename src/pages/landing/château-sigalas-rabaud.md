@@ -1,4 +1,5 @@
 ---
+templateKey: landing
 slug: chateau-sigalas-rabaud
 title: Château Sigalas Rabaud
 segmentCategory: leisure
@@ -8,4 +9,3 @@ segmentLogoUrl: >-
 drivyAddressSearchUrl: >-
   https://www.drivy.com/search?address_source=google&only_responsive=true&country_scope=FR&latitude=44.842051&longitude=-0.5752969999999777&address=Grand+Th%C3%A9%C3%A2tre%2C+Bordeaux%2C+France&city_display_name=Bordeaux
 ---
-
