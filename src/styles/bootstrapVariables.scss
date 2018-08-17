@@ -78,9 +78,13 @@ $hr-border-color: rgba($white, 0.5);
   @return $string;
 }
 
-$navbar-dark-toggler-border-color: rgba($white, 0.9);
-$navbar-dark-toggler-icon-bg: str-replace(
-  url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-dark-toggler-border-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"),
+$navbar-light-color: rgba($blue, 0.8);
+$navbar-light-hover-color: rgba($blue, 0.9);
+$navbar-light-active-color: $blue;
+$navbar-light-disabled-color: rgba($blue, 0.5);
+$navbar-light-toggler-icon-bg: str-replace(
+  url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"),
   '#',
   '%23'
 );
+$navbar-light-toggler-border-color: rgba($blue, 0.7);
