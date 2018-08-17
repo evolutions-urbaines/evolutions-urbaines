@@ -31,14 +31,14 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/pages/articles`,
-        name: 'article',
+        name: 'articles',
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/pages/landing`,
-        name: 'landing',
+        path: `${__dirname}/src/pages/landings`,
+        name: 'landings',
       },
     },
     'gatsby-transformer-remark',
