@@ -1,6 +1,5 @@
 ---
 templateKey: landing
-slug: cdiscount
 title: Cdiscount
 segmentCategory: leisure
 segmentAroundExpression: aux Quinconces

@@ -1,6 +1,5 @@
 ---
 templateKey: landing
-slug: chartrons
 title: Les Chartrons
 segmentCategory: leisure
 segmentAroundExpression: aux Chartrons
