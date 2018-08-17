@@ -6,7 +6,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import '../styles/index.scss'
 import '@fortawesome/fontawesome-free/css/all.css'
 
-import LandingNavigation from './landingNavigation'
+import Navigation from './navigation'
 import Footer from './footer'
 
 import ogImage from '../images/ogImage.jpg'
@@ -15,6 +15,8 @@ import ogImageSquare from '../images/ogImageSquare.jpg'
 const Layout = ({
   children,
   pathname,
+  navigationComponent,
+  navigationProps,
   segmentName,
   segmentLogoUrl,
   segmentDrivyReferralUrl,
@@ -50,6 +52,8 @@ const Layout = ({
         process.env.NODE_ENV === 'production'
           ? siteUrl + ogImageSquare
           : ogImageSquare
+
+      const LayoutNavigation = navigationComponent || Navigation
 
       return (
         <>
@@ -87,11 +91,7 @@ const Layout = ({
             ]}
           />
 
-          <LandingNavigation
-            segmentName={segmentName}
-            segmentLogoUrl={segmentLogoUrl}
-            segmentDrivyReferralUrl={segmentDrivyReferralUrl}
-          />
+          <LayoutNavigation {...navigationProps} />
 
           <main>{children}</main>
 

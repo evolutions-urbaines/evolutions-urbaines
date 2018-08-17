@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
+import LandingNavigation from '../components/landingNavigation'
 import Hero from '../components/hero'
 import OneClickSearch from '../components/oneClickSearch'
 import USP from '../components/uSP'
@@ -13,9 +14,12 @@ const LandingTemplate = ({ data, location }) => {
   return (
     <Layout
       pathname={location.pathname}
-      segmentName={frontmatter.title}
-      segmentLogoUrl={frontmatter.segmentLogoUrl}
-      segmentDrivyReferralUrl={frontmatter.segmentDrivyReferralUrl}
+      navigationComponent={LandingNavigation}
+      navigationProps={{
+        segmentName: frontmatter.title,
+        segmentLogoUrl: frontmatter.segmentLogoUrl,
+        segmentDrivyReferralUrl: frontmatter.segmentDrivyReferralUrl,
+      }}
     >
       <Hero segmentCategory={frontmatter.segmentCategory}>
         <div className="container position-relative">
