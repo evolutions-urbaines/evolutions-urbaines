@@ -48,7 +48,7 @@ class Navigation extends Component {
               navbar
             >
               <ul className="navbar-nav mr-auto">
-                <li className="nav-item">
+                {/* <li className="nav-item">
                   <Link
                     to="/autopartage"
                     className="nav-link"
@@ -56,7 +56,7 @@ class Navigation extends Component {
                   >
                     Autopartage
                   </Link>
-                </li>
+                </li> */}
               </ul>
 
               <div className="d-flex align-items-center children-mx-3">
