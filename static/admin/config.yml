@@ -6,6 +6,9 @@ media_folder: static/assets
 public_folder: assets
 
 display_url: https://evolutions-urbaines.fr
+slug:
+  encoding: ascii
+  clean_accents: true
 
 collections:
   - name: articles
@@ -13,8 +16,8 @@ collections:
     folder: src/pages/articles
     create: true
     fields:
-      - { name: slug, label: Slug }
-      - { name: date, label: Date, widget: date }
+      - { name: templateKey, label: Template Key, widget: hidden, default: article}
+      - { name: date, label: Date, widget: date, format: DD MMM YYYY }
       - { name: title, label: Title }
       - { name: body, label: Body, widget: markdown }
   - name: landing-business
@@ -23,9 +26,9 @@ collections:
     create: true
     filter: { field: segmentCategory, value: business }
     fields:
-      - { name: slug, label: Slug }
+      - { name: templateKey, label: Template Key, widget: hidden, default: landing}
       - { name: title, label: Title · Segment Name }
-      - { name: segmentCategory, label: Segment Category, widget: select, options: [business, leisure]}
+      - { name: segmentCategory, label: Segment Category, widget: select, options: [business, leisure], default: business}
       - { name: segmentAroundExpression, label: Segment "around" expression }
       - { name: segmentLogoUrl, label: Segment Logo URL, required: false }
       - { name: drivyAddressSearchUrl, label: Drivy address search URL }
@@ -42,9 +45,9 @@ collections:
     create: true
     filter: { field: segmentCategory, value: leisure }
     fields:
-      - { name: slug, label: Slug }
+      - { name: templateKey, label: Template Key, widget: hidden, default: landing}
       - { name: title, label: Title · Segment Name }
-      - { name: segmentCategory, label: Segment Category, widget: select, options: [business, leisure]}
+      - { name: segmentCategory, label: Segment Category, widget: select, options: [business, leisure], default: leisure}
       - { name: segmentAroundExpression, label: Segment "around" expression }
       - { name: segmentLogoUrl, label: Segment Logo URL, required: false }
       - { name: drivyAddressSearchUrl, label: Drivy address search URL }
