@@ -13,7 +13,7 @@ const LandingTemplate = ({ data, location }) => {
 
   return (
     <Layout
-      pathname={location.pathname}
+      {...{ location }}
       navigationComponent={LandingNavigation}
       navigationProps={{
         segmentName: frontmatter.title,

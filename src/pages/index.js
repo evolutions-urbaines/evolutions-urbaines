@@ -7,10 +7,7 @@ import USP from '../components/uSP'
 import CarDisplay from '../components/carDisplay'
 
 const IndexPage = ({ location }) => (
-  <Layout
-    pathname={location.pathname}
-    locationsegmentName="Evolutions Urbaines"
-  >
+  <Layout {...{ location }}>
     <Hero>
       <div className="container position-relative">
         <div className="mb-5">

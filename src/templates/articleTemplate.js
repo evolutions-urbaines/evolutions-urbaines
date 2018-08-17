@@ -8,7 +8,7 @@ const ArticleTemplate = ({ data, location }) => {
 
   return (
     <Layout
-      pathname={location.pathname}
+      {...{ location }}
       segmentName={frontmatter.title}
       segmentLogoUrl={frontmatter.segmentLogoUrl}
       segmentDrivyReferralUrl={frontmatter.segmentDrivyReferralUrl}

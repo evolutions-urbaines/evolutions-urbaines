@@ -14,12 +14,9 @@ import ogImageSquare from '../images/ogImageSquare.jpg'
 
 const Layout = ({
   children,
-  pathname,
+  location: { pathname },
   navigationComponent,
   navigationProps,
-  segmentName,
-  segmentLogoUrl,
-  segmentDrivyReferralUrl,
 }) => (
   <StaticQuery
     query={graphql`
@@ -42,8 +39,10 @@ const Layout = ({
       },
     }) => {
       const allKeywords =
-        typeof segmentName !== 'undefined'
-          ? `${segmentName.toLowerCase().replace(' ', ', ')}, ${keywords}`
+        navigationProps && navigationProps.segmentName
+          ? `${navigationProps.segmentName
+              .toLowerCase()
+              .replace(' ', ', ')}, ${keywords}`
           : keywords
 
       const ogImageUrl =
