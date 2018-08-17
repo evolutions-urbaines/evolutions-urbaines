@@ -25,7 +25,12 @@ module.exports = {
         precision: 8,
       },
     },
-    'gatsby-plugin-purgecss',
+    {
+      resolve: `gatsby-plugin-purgecss`,
+      options: {
+        whitelist: ['collapse', 'navbar-collapse', 'navigation-opened', 'show'],
+      },
+    },
     'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-source-filesystem',

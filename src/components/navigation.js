@@ -46,7 +46,6 @@ class Navigation extends Component {
               isOpen={this.state.isOpen}
               onClick={this.closeNavbar}
               navbar
-              className="collapse navbar-collapse"
             >
               <ul className="navbar-nav mr-auto">
                 {/* <li className="nav-item">
