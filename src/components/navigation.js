@@ -47,7 +47,7 @@ class Navigation extends Component {
               onClick={this.closeNavbar}
               navbar
             >
-              <ul className="navbar-nav">
+              <ul className="navbar-nav mr-auto">
                 <li className="nav-item">
                   <Link
                     to="/autopartage"
@@ -58,6 +58,17 @@ class Navigation extends Component {
                   </Link>
                 </li>
               </ul>
+
+              <div className="d-flex align-items-center children-mx-3">
+                <span>Nouveau ?</span>
+                <a
+                  href="https://www.drivy.com/r/2039832-027"
+                  target="drivy"
+                  className="btn btn-primary"
+                >
+                  10€ offerts
+                </a>
+              </div>
             </Collapse>
           </div>
         </nav>
