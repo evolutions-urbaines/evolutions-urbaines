@@ -28,7 +28,14 @@ module.exports = {
     {
       resolve: `gatsby-plugin-purgecss`,
       options: {
-        whitelist: ['collapse', 'navbar-collapse', 'navigation-opened', 'show'],
+        whitelist: [
+          'collapse',
+          'collapsing',
+          'fade',
+          'navbar-collapse',
+          'navigation-opened',
+          'show',
+        ],
       },
     },
     'gatsby-plugin-sitemap',

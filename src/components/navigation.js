@@ -22,14 +22,9 @@ class Navigation extends Component {
   handleClickOutside = this.closeNavbar
 
   classes = () =>
-    classNames(
-      'navigation',
-      'sticky-top',
-      {
-        'navigation-opened': this.state.isOpen,
-      },
-      'text-primary'
-    )
+    classNames('navigation', 'sticky-top', {
+      'navigation-opened': this.state.isOpen,
+    })
 
   render() {
     return (
