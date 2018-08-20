@@ -16,7 +16,6 @@ collections:
     folder: src/pages/articles
     create: true
     fields:
-      - { name: templateKey, label: Template Key, widget: hidden, default: article}
       - { name: date, label: Date, widget: date, format: DD MMM YYYY }
       - { name: title, label: Title }
       - { name: body, label: Body, widget: markdown }
@@ -26,7 +25,6 @@ collections:
     create: true
     filter: { field: segmentCategory, value: business }
     fields:
-      - { name: templateKey, label: Template Key, widget: hidden, default: landing}
       - { name: title, label: Title · Segment Name }
       - { name: segmentCategory, label: Segment Category, widget: select, options: [business, leisure], default: business}
       - { name: segmentAroundExpression, label: Segment "around" expression }
@@ -45,7 +43,6 @@ collections:
     create: true
     filter: { field: segmentCategory, value: leisure }
     fields:
-      - { name: templateKey, label: Template Key, widget: hidden, default: landing}
       - { name: title, label: Title · Segment Name }
       - { name: segmentCategory, label: Segment Category, widget: select, options: [business, leisure], default: leisure}
       - { name: segmentAroundExpression, label: Segment "around" expression }
