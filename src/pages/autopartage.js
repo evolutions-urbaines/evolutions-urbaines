@@ -73,7 +73,7 @@ const CarSharingPage = ({ location }) => (
       </li>
 
       <li>
-        <h3>Une propreté et une hygiène irréprochable</h3>
+        <h3>Une propreté et une hygiène irréprochables</h3>
         <p>
           Les voitures ayant une utilisation régulière et soutenue, nous
           accordons beaucoup d'importance au maintien du niveau de propreté et
