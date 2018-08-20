@@ -14,9 +14,7 @@ exports.createPages = ({ actions, graphql }) => {
             id
             fields {
               slug
-            }
-            frontmatter {
-              templateKey
+              collection
             }
           }
         }
@@ -31,7 +29,7 @@ exports.createPages = ({ actions, graphql }) => {
       createPage({
         path: node.fields.slug,
         component: path.resolve(
-          `src/templates/${String(node.frontmatter.templateKey)}Template.js`
+          `src/templates/${String(node.fields.collection)}Template.js`
         ),
         context: {
           id: node.id,
@@ -45,11 +43,18 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
   if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode })
+    const slug = createFilePath({ node, getNode })
     createNodeField({
-      name: `slug`,
       node,
-      value,
+      name: 'slug',
+      value: slug,
+    })
+
+    const parent = getNode(node.parent)
+    createNodeField({
+      node,
+      name: 'collection',
+      value: parent.sourceInstanceName,
     })
   }
 }
