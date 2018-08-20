@@ -22,7 +22,7 @@ collections:
       - { name: body, label: Body, widget: markdown }
   - name: landing-business
     label: Landing Pages · Business
-    folder: src/pages/landing
+    folder: src/pages/landings
     create: true
     filter: { field: segmentCategory, value: business }
     fields:
@@ -41,7 +41,7 @@ collections:
       - { name: segmentRepresentativeSpeech, label: Segment Representative speech, required: false }
   - name: landing-leisure
     label: Landing Pages · Leisure
-    folder: src/pages/landing
+    folder: src/pages/landings
     create: true
     filter: { field: segmentCategory, value: leisure }
     fields:
