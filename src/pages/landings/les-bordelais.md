@@ -1,5 +1,4 @@
 ---
-templateKey: landing
 title: Les Bordelais
 segmentCategory: leisure
 segmentAroundExpression: aux Quinconces

@@ -1,5 +1,4 @@
 ---
-templateKey: landing
 title: Entreprise
 segmentCategory: business
 segmentAroundExpression: au centre de Bordeaux

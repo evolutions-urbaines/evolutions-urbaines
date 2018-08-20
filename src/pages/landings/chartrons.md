@@ -1,5 +1,4 @@
 ---
-templateKey: landing
 title: Les Chartrons
 segmentCategory: leisure
 segmentAroundExpression: aux Chartrons

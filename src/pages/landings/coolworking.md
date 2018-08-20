@@ -1,5 +1,4 @@
 ---
-templateKey: landing
 title: Coolworking
 segmentCategory: business
 segmentAroundExpression: autour du Coolworking

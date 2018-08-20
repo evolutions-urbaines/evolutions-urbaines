@@ -1,5 +1,4 @@
 ---
-templateKey: landing
 title: W'iN
 segmentCategory: business
 segmentAroundExpression: autour de W'iN

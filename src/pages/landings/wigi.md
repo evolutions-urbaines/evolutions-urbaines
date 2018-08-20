@@ -1,5 +1,4 @@
 ---
-templateKey: landing
 title: WIGI
 segmentCategory: business
 segmentAroundExpression: autour de WIGI

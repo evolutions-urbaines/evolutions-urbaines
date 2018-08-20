@@ -1,5 +1,4 @@
 ---
-templateKey: landing
 title: Condillac Expertise
 segmentCategory: business
 segmentAroundExpression: aux Quinconces

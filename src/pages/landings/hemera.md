@@ -1,5 +1,4 @@
 ---
-templateKey: landing
 title: Héméra
 segmentCategory: business
 segmentAroundExpression: aux Quinconces

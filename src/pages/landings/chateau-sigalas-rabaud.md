@@ -1,5 +1,4 @@
 ---
-templateKey: landing
 title: Château Sigalas Rabaud
 segmentCategory: leisure
 segmentAroundExpression: au centre de Bordeaux
