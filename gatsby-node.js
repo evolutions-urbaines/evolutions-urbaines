@@ -73,7 +73,6 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
             },
           })
           .then(({ data }) => {
-            console.log(data.title)
             createNodeField({
               node,
               name: 'url',
