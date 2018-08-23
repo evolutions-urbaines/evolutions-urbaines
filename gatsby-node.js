@@ -65,37 +65,46 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
       break
     case 'CarsYaml':
-      axios
-        .get(`${process.env.API_URL}/cars/${node.car_id}`, {
-          headers: {
-            'X-VL-Authorization': process.env.VL_AUTHORIZATION,
-          },
-        })
-        .then(({ data }) => {
-          createNodeField({
-            node,
-            name: 'url',
-            value: data.url,
+      return new Promise((resolve, reject) => {
+        axios
+          .get(`${process.env.API_URL}/cars/${node.car_id}`, {
+            headers: {
+              'X-VL-Authorization': process.env.VL_AUTHORIZATION,
+            },
           })
+          .then(({ data }) => {
+            console.log(data.title)
+            createNodeField({
+              node,
+              name: 'url',
+              value: data.url,
+            })
 
-          createNodeField({
-            node,
-            name: 'thumbUrl',
-            value: data.photos[0].thumb_url,
-          })
+            createNodeField({
+              node,
+              name: 'thumbUrl',
+              value: data.photos[0].thumb_url,
+            })
 
-          createNodeField({
-            node,
-            name: 'city',
-            value: data.city,
-          })
+            createNodeField({
+              node,
+              name: 'city',
+              value: data.city,
+            })
 
-          createNodeField({
-            node,
-            name: 'stats',
-            value: data.stats,
+            createNodeField({
+              node,
+              name: 'stats',
+              value: data.stats,
+            })
+
+            resolve()
           })
-        })
+          .catch(error => {
+            console.log(error)
+            reject()
+          })
+      })
 
       break
   }
