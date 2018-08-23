@@ -1,41 +1,44 @@
 import React from 'react'
 
 const CarCard = ({
-  carName,
-  carUrl,
-  carImageUrl,
-  carLocation,
-  carYear,
-  carRating,
-  carRatingsCount,
-  carPrice,
+  name,
+  url,
+  thumbUrl,
+  location,
+  year,
+  ratingsAverage,
+  ratingsCount,
+  price,
 }) => (
-  <a className="text-decoration-none" href={carUrl} target="drivy">
+  <a className="text-decoration-none" href={url} target="drivy">
     <article className="car_card">
       <div
         className="car_card__header"
         style={{
-          backgroundImage: `url('${carImageUrl})`,
+          backgroundImage: `url('${thumbUrl})`,
         }}
       />
       <div className="car_card__body">
         <div className="car_card__content">
-          <div className="car_card__title">{carName}</div>
+          <div className="car_card__title">{name}</div>
           <ul className="car_card__specs">
-            <li>{carLocation}</li>
-            <li>{carYear}</li>
+            <li>{location}</li>
+            <li>{year}</li>
           </ul>
           <span className="car_card__ratings">
-            <i className="fas fa-star" />
-            <i className="fas fa-star" />
-            <i className="fas fa-star" />
-            <i className="fas fa-star" />
-            <i className="fas fa-star" />
-            <span className="car_card__ratings_count">{carRatingsCount}</span>
+            {new Array(Math.round(ratingsAverage / 2)).fill(null).map(() => (
+              <i className="fas fa-star" />
+            ))}
+            {new Array(5 - Math.round(ratingsAverage / 2))
+              .fill(null)
+              .map(() => (
+                <i className="fas fa-star empty" />
+              ))}
+            <span className="car_card__ratings_count">{ratingsCount}</span>
           </span>
         </div>
         <div className="car_card__price">
-          <div className="card_card__price_value">{carPrice}€</div>
+          <div className="card_card__price_value">{price}€</div>
           <div className="card_card__price_label">/ jour</div>
         </div>
       </div>
