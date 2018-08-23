@@ -13,7 +13,7 @@ const CarSharingPage = ({ location }) => (
 
     <h2>
       <span className="font-weight-normal">Les </span>7 marqueurs de Qualité{' '}
-      <span className="font-weight-normal">pour une autopartage réussi</span>
+      <span className="font-weight-normal">pour un autopartage réussi</span>
     </h2>
     <ol>
       <li>
@@ -48,7 +48,7 @@ const CarSharingPage = ({ location }) => (
         <p>
           Que ce soit sur des places dédiées dans la rue ou dans un parking
           privé, vous êtes assuré de pouvoir vous garer en toute simplicité à
-          votre retour. Nos voitures sont disposées en plein centre ville, au
+          votre retour. Nos voitures sont stationnées en plein centre ville, au
           plus proche de vous.
         </p>
       </li>
