@@ -10,8 +10,10 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.1.1",
+    "axios": "^0.18.0",
     "bootstrap": "^4.1.2",
     "classnames": "^2.2.6",
+    "dotenv": "^6.0.0",
     "gatsby": "next",
     "gatsby-plugin-catch-links": "next",
     "gatsby-plugin-google-analytics": "next",
@@ -22,6 +24,7 @@
     "gatsby-plugin-sitemap": "next",
     "gatsby-source-filesystem": "next",
     "gatsby-transformer-remark": "next",
+    "gatsby-transformer-yaml": "next",
     "moment": "^2.22.2",
     "moment-business-days": "^1.0.6",
     "netlify-cms": "^2.0.9",

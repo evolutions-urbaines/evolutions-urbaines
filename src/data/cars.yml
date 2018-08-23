@@ -1,0 +1,17 @@
+- name: Renault Clio neuve 315DC
+  car_id: 350543
+  location: Bordeaux Quinconces
+  year: 2018
+  price: 40
+
+- name: Renault Clio neuve 86DD
+  car_id: 350554
+  location: Bordeaux Quinconces
+  year: 2018
+  price: 40
+
+- name: Renault Clio neuve 77DD
+  car_id: 350552
+  location: Bordeaux Quinconces
+  year: 2018
+  price: 40

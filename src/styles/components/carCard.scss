@@ -61,6 +61,9 @@
     align-items: center;
     i {
       color: #00d9d9;
+      &.empty {
+        color: #dce1e1;
+      }
     }
   }
   &__ratings_count {
