@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'gatsby-link'
 
 import Layout from '../components/layout'
 
@@ -20,8 +21,9 @@ const CarSharingPage = ({ location }) => (
         <h3>Une relation humaine, un service d'excellence</h3>
         <p>
           Nous sommes persuadés que les services du futur doivent répondre à un
-          niveau d'exigence qui ne cesse d'augmenter, tout en conservant des
-          relations humaines sincères.
+          niveau d'exigence qui ne cesse d'augmenter, tout en conservant{' '}
+          <Link to="/satisfaction-client">des relations humaines sincères</Link>
+          .
         </p>
       </li>
 

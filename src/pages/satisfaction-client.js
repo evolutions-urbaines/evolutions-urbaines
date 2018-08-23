@@ -1,11 +1,17 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import Link from 'gatsby-link'
 
 import Layout from '../components/layout'
 
 const CustomerSuccesPage = ({ data: { allReviewsYaml }, location }) => (
   <Layout {...{ location }}>
     <h1>La satisfaction client</h1>
+
+    <p>
+      Votre satisfaction fait partie de nos{' '}
+      <Link to="/autopartage">marqueurs de qualité</Link>
+    </p>
 
     <a href="https://www.drivy.com/users/2039832" target="drivy">
       Profil Drivy
