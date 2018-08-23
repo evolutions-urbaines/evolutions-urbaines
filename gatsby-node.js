@@ -64,6 +64,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       })
 
       break
+
     case 'CarsYaml':
       return new Promise((resolve, reject) => {
         axios
@@ -105,6 +106,30 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
           })
       })
 
+      break
+
+    case 'ReviewsYaml':
+      return new Promise((resolve, reject) => {
+        axios
+          .get(`${process.env.API_URL}/users/${node.user_id}/reviews`, {
+            headers: {
+              'X-VL-Authorization': process.env.VL_AUTHORIZATION,
+            },
+          })
+          .then(({ data }) => {
+            createNodeField({
+              node,
+              name: 'cars',
+              value: data.as_owner,
+            })
+
+            resolve()
+          })
+          .catch(error => {
+            console.log(error)
+            reject()
+          })
+      })
       break
   }
 }
