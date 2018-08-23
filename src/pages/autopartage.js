@@ -22,7 +22,9 @@ const CarSharingPage = ({ location }) => (
         <p>
           Nous sommes persuadés que les services du futur doivent répondre à un
           niveau d'exigence qui ne cesse d'augmenter, tout en conservant{' '}
-          <Link to="/satisfaction-client">des relations humaines sincères</Link>
+          <Link to="/satisfaction-client" className="text-secondary">
+            des relations humaines sincères
+          </Link>
           .
         </p>
       </li>

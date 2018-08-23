@@ -98,6 +98,12 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
               value: data.stats,
             })
 
+            createNodeField({
+              node,
+              name: 'owner',
+              value: data.owner,
+            })
+
             resolve()
           })
           .catch(error => {

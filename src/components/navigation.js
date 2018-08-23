@@ -52,6 +52,15 @@ class Navigation extends Component {
                     Autopartage
                   </Link>
                 </li> */}
+                <li className="nav-item">
+                  <Link
+                    to="/satisfaction-client"
+                    className="nav-link"
+                    activeClassName="active"
+                  >
+                    Service
+                  </Link>
+                </li>
               </ul>
 
               <div className="d-flex align-items-center children-mx-3">

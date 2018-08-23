@@ -27,7 +27,7 @@ $white: #fff;
 // $gray-200: #e9ecef !default;
 // $gray-300: #dee2e6 !default;
 // $gray-400: #ced4da !default;
-// $gray-500: #adb5bd !default;
+$gray-500: #adb5bd;
 // $gray-600: #6c757d !default;
 // $gray-700: #495057 !default;
 // $gray-800: #343a40 !default;
@@ -46,7 +46,7 @@ $yellow: #d8ff00;
 $cyan: #00d9d9;
 //
 // $primary: $blue !default;
-// $secondary: $gray-600 !default;
+$secondary: $gray-500;
 // $success: $green !default;
 // $info: $cyan !default;
 // $warning: $yellow !default;
