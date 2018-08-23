@@ -53,6 +53,14 @@ module.exports = {
         name: 'landings',
       },
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/data/`,
+        name: 'cars',
+      },
+    },
     'gatsby-transformer-remark',
+    'gatsby-transformer-yaml',
   ],
 }
