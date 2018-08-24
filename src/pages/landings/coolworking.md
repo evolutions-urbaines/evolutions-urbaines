@@ -13,7 +13,7 @@ segmentRepresentativePhotoUrl: 'https://www.coolworking.fr/wp-content/uploads/20
 segmentRepresentativeName: Fabrice Jeannet
 segmentRepresentativeRole: Co-fondateur et gérant du Coolworking
 segmentRepresentativeSpeech: >-
-  Génial ! Pour vos réunions professionnelles à l'extérieur, vous disposez
+  Génial ! Pour vos rendez-vous professionnels à l'extérieur, vous disposez
   maintenant de voitures neuves à deux pas du Coolworking, sur la place des
   Quinconces. Profitez-en !
 ---
