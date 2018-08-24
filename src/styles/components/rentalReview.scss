@@ -3,82 +3,54 @@
   display: flex;
   flex-wrap: wrap;
   word-break: break-word;
-}
+  & + .rental_review {
+    margin-top: 16px;
+    padding-top: 16px;
+    &:before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block;
+      height: 1px;
+      width: calc(100% - 32px);
+      margin-right: -24px;
+      content: '';
+      background-color: rgba(0, 0, 0, 0.12);
+    }
+  }
 
-.rental_review + .rental_review {
-  margin-top: 16px;
-  padding-top: 16px;
-}
+  &__thumb {
+    height: 40px;
+    width: 40px;
+    margin-right: 16px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-position: center center;
+    background-size: cover;
+  }
 
-.rental_review + .rental_review:before {
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: block;
-  height: 1px;
-  width: calc(100% - 32px);
-  margin-right: -24px;
-  content: '';
-  background-color: rgba(0, 0, 0, 0.12);
-}
+  &__content {
+    flex: 1;
+  }
 
-.rental_review__thumb {
-  height: 40px;
-  width: 40px;
-  margin-right: 16px;
-  flex-shrink: 0;
-  border-radius: 50%;
-  background-position: center center;
-  background-size: cover;
-}
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
 
-.rental_review__content {
-  flex: 1;
-}
+  &__title {
+    margin-bottom: 0;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #262959;
+  }
 
-.rental_review__content .star_ratings {
-  height: 16px;
-  margin-top: 16px;
-}
-
-.rental_review__private_comment {
-  width: 100%;
-  padding: 16px;
-  font-style: italic;
-  border-radius: 5px;
-  background: #f7f9f9;
-}
-
-.rental_review__info {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 8px;
-}
-
-.rental_review__title {
-  margin-bottom: 0;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 24px;
-  color: #262959;
-}
-
-.rental_review__date {
-  margin-bottom: 0;
-  font-size: 15px;
-  line-height: 24px;
-  color: rgba(51, 51, 51, 0.5);
-}
-
-.rental_review__private_comment_title {
-  margin-bottom: 0;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 24px;
-  color: #262959;
-  margin-bottom: 8px;
-  font-size: 16px;
+  &__date {
+    margin-bottom: 0;
+    font-size: 15px;
+    line-height: 24px;
+    color: rgba(51, 51, 51, 0.5);
+  }
 }

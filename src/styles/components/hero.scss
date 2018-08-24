@@ -22,23 +22,23 @@
   p {
     text-shadow: 0 3px 20px rgba(0, 0, 0, 0.3);
   }
-}
 
-@media (min-width: 768px) {
-  .hero {
-    padding-top: 192px;
+  @media (min-width: 768px) {
+    & {
+      padding-top: 192px;
+    }
   }
+  //
+  // @media (max-width: 991px) {
+  //   & {
+  //     background-image: url();
+  //   }
+  // }
+  //
+  // @media (max-width: 767px) {
+  //   & {
+  //     background-image: url();
+  //     background-position: center top;
+  //   }
+  // }
 }
-
-// @media (max-width: 991px) {
-//   .hero {
-//     background-image: url();
-//   }
-// }
-//
-// @media (max-width: 767px) {
-//   .hero {
-//     background-image: url();
-//     background-position: center top;
-//   }
-// }

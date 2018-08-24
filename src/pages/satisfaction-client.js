@@ -13,14 +13,19 @@ const CustomerSuccesPage = ({
     <Layout skipContainer="true" {...{ location }}>
       <div className="bg-steel py-4">
         <div className="container">
-          <h1>Satisfaction Client</h1>
+          <h1>Une relation humaine, un service d'excellence</h1>
 
           <p>
             Votre satisfaction fait partie de nos{' '}
             <Link to="/autopartage" className="text-secondary">
               marqueurs de qualité
             </Link>
+            .
           </p>
+
+          <p>C'est vous qui en parlez le mieux !</p>
+
+          <h2 className="h4 my-4">Avis clients sur la plateforme Drivy</h2>
 
           <div className="row">
             <div className="col-12 col-md-4 mb-5">
@@ -32,9 +37,8 @@ const CustomerSuccesPage = ({
                     alt={owner.public_name}
                   />
                   <div className="user_card_name">
-                    François
-                    <br />
-                    Evolutions Urbaines
+                    <div className="mb-2">François</div>
+                    Evolutions Urbaines
                   </div>
                 </div>
                 <div className="p-3">
@@ -99,7 +103,7 @@ const CustomerSuccesPage = ({
                               </div>
                             </div>
                             <div className="rental_review__text">
-                              <p itemprop="reviewBody">{comment}</p>
+                              <p>{comment}</p>
                             </div>
                             <div className="mb-3">
                               {new Array(5).fill(null).map(() => (

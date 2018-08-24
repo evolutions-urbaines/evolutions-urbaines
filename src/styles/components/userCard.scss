@@ -1,191 +1,36 @@
-.user_card_infos {
-  padding: 20px 15px;
-  background-color: #d8ff00;
-  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyBAMAAADsEZWCAAAAD1BMVEUVFRWysrJ2dnbt7e1ERETMYaWmAAAABXRSTlMNDQ0NDQtWi34AAAMNSURBVBgZBQAJEQQhCMEAgAYQNIBfAHWvf6YbCFAYO99hO5LG51GTKEIB9mJAKf/8u3UkLr8SqbsNSNa1pSwd/W0ReVaPiksFR2KUI9/DQ7/0U6GOKZlAAAqkaUsHZSrbnEpPqSRIeWqvcUg9LY1IDxKuKRSg1gnGDeMsya+kR9DBTmWYtPrKh4PNE1+Zld/3MiAAEZ1pv6tD87kYletYVSmAWrsWG5kAQSEMAGO1tQXOmTWYjMjfzPpM30zM4yCswHUTzrtf+fk9Mhp8WWDBeTFeI17z4aqJT5e6ck8fVPydkcOUmy7AbvcHPm6sAHerHI6jlRL5nCJK78TKHeCryX5LIJSjM9PuPQCueMH9V14x6vd7aZQVXfQhjA0fx0XXv6tcpocGJv2jAA84rKuQVvpwqgY2GUpj9wdzRSrJLeO4o3NUolGZyg+6IXOIHB7SPk1WjTojOQDPzmv0Zdtv3eEVZ5RuXIAhhw8tF5CeO3zEYfuuHEFiLYEx7lIICEPpRUoYPqCHt8pcj+4h/YEn89yWlAgTzvwKhljvJ0ZBIhUdSAEgWUp8R0v1PO/2Br9zgwjknBc+0Q7TNcjn6r7kmxn47pHtpsdoa8xq7UAELxtM9+jD9rHNvXwE5fRg5cfQ74xYE/XeGRVyIakUXnpwCOeHpZxqv4YX0kjgsX0MXtxYP+CtsLKfc0eX6LlBgbWYa8uP84GfP42vr1obILSwNP5OnwnHzcPOyHGsDjSS2zTT3A/fkFqRnniEBZNGmeurJVSSRVdfwO8KOyB6fe23uFkTNqs4wrD5GDrV6lMxlY0pBV+ow1XXgy82o4nebUH/OaTyMP4kCExHCujnfTrXB9ja8cgoCFdX0dVSYGKfKPvlbdKTA+NNz67E3HYmEqfce831wniMNUrWQeQlC1m9V2MwqCPBSunzN9fMYbcmQQsrwR5ltSMAsqH3H+Yw/Vb0DcG6Irm1ZWonhw7Wn8MX4fuRTnCdFtMLcE8hbVoIALYR1xgxWSfrAkFHiQcYZnkDRdccqRzxaW8PGRDuH+nblSO5NZsLAAAAAElFTkSuQmCC'),
-    -webkit-linear-gradient(left, #00d9d9, #d8ff00);
-  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyBAMAAADsEZWCAAAAD1BMVEUVFRWysrJ2dnbt7e1ERETMYaWmAAAABXRSTlMNDQ0NDQtWi34AAAMNSURBVBgZBQAJEQQhCMEAgAYQNIBfAHWvf6YbCFAYO99hO5LG51GTKEIB9mJAKf/8u3UkLr8SqbsNSNa1pSwd/W0ReVaPiksFR2KUI9/DQ7/0U6GOKZlAAAqkaUsHZSrbnEpPqSRIeWqvcUg9LY1IDxKuKRSg1gnGDeMsya+kR9DBTmWYtPrKh4PNE1+Zld/3MiAAEZ1pv6tD87kYletYVSmAWrsWG5kAQSEMAGO1tQXOmTWYjMjfzPpM30zM4yCswHUTzrtf+fk9Mhp8WWDBeTFeI17z4aqJT5e6ck8fVPydkcOUmy7AbvcHPm6sAHerHI6jlRL5nCJK78TKHeCryX5LIJSjM9PuPQCueMH9V14x6vd7aZQVXfQhjA0fx0XXv6tcpocGJv2jAA84rKuQVvpwqgY2GUpj9wdzRSrJLeO4o3NUolGZyg+6IXOIHB7SPk1WjTojOQDPzmv0Zdtv3eEVZ5RuXIAhhw8tF5CeO3zEYfuuHEFiLYEx7lIICEPpRUoYPqCHt8pcj+4h/YEn89yWlAgTzvwKhljvJ0ZBIhUdSAEgWUp8R0v1PO/2Br9zgwjknBc+0Q7TNcjn6r7kmxn47pHtpsdoa8xq7UAELxtM9+jD9rHNvXwE5fRg5cfQ74xYE/XeGRVyIakUXnpwCOeHpZxqv4YX0kjgsX0MXtxYP+CtsLKfc0eX6LlBgbWYa8uP84GfP42vr1obILSwNP5OnwnHzcPOyHGsDjSS2zTT3A/fkFqRnniEBZNGmeurJVSSRVdfwO8KOyB6fe23uFkTNqs4wrD5GDrV6lMxlY0pBV+ow1XXgy82o4nebUH/OaTyMP4kCExHCujnfTrXB9ja8cgoCFdX0dVSYGKfKPvlbdKTA+NNz67E3HYmEqfce831wniMNUrWQeQlC1m9V2MwqCPBSunzN9fMYbcmQQsrwR5ltSMAsqH3H+Yw/Vb0DcG6Irm1ZWonhw7Wn8MX4fuRTnCdFtMLcE8hbVoIALYR1xgxWSfrAkFHiQcYZnkDRdccqRzxaW8PGRDuH+nblSO5NZsLAAAAAElFTkSuQmCC'),
-    linear-gradient(to right, #00d9d9, #d8ff00);
-  border-radius: 2px 2px 0 0;
-}
-
-.user_card_infos:after {
-  display: table;
-  line-height: 0;
-  content: '';
-  clear: both;
-}
-
-.user_card_infos_block {
-  border-top: 1px solid #b4bbc6;
-}
-
-.user_card_infos_block:first-child {
-  border-top: 0;
-}
-
-.user_card_picture {
-  position: relative;
-  z-index: 2;
-  display: block;
-  width: 100px;
-  height: 100px;
-  margin: 0 auto 20px auto;
-}
-
-@media (max-width: 767px) {
-  .user_card_picture {
-    width: 70px;
-    height: 70px;
+.user_card {
+  &_infos {
+    padding: 20px 15px;
+    background-color: #d8ff00;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyBAMAAADsEZWCAAAAD1BMVEUVFRWysrJ2dnbt7e1ERETMYaWmAAAABXRSTlMNDQ0NDQtWi34AAAMNSURBVBgZBQAJEQQhCMEAgAYQNIBfAHWvf6YbCFAYO99hO5LG51GTKEIB9mJAKf/8u3UkLr8SqbsNSNa1pSwd/W0ReVaPiksFR2KUI9/DQ7/0U6GOKZlAAAqkaUsHZSrbnEpPqSRIeWqvcUg9LY1IDxKuKRSg1gnGDeMsya+kR9DBTmWYtPrKh4PNE1+Zld/3MiAAEZ1pv6tD87kYletYVSmAWrsWG5kAQSEMAGO1tQXOmTWYjMjfzPpM30zM4yCswHUTzrtf+fk9Mhp8WWDBeTFeI17z4aqJT5e6ck8fVPydkcOUmy7AbvcHPm6sAHerHI6jlRL5nCJK78TKHeCryX5LIJSjM9PuPQCueMH9V14x6vd7aZQVXfQhjA0fx0XXv6tcpocGJv2jAA84rKuQVvpwqgY2GUpj9wdzRSrJLeO4o3NUolGZyg+6IXOIHB7SPk1WjTojOQDPzmv0Zdtv3eEVZ5RuXIAhhw8tF5CeO3zEYfuuHEFiLYEx7lIICEPpRUoYPqCHt8pcj+4h/YEn89yWlAgTzvwKhljvJ0ZBIhUdSAEgWUp8R0v1PO/2Br9zgwjknBc+0Q7TNcjn6r7kmxn47pHtpsdoa8xq7UAELxtM9+jD9rHNvXwE5fRg5cfQ74xYE/XeGRVyIakUXnpwCOeHpZxqv4YX0kjgsX0MXtxYP+CtsLKfc0eX6LlBgbWYa8uP84GfP42vr1obILSwNP5OnwnHzcPOyHGsDjSS2zTT3A/fkFqRnniEBZNGmeurJVSSRVdfwO8KOyB6fe23uFkTNqs4wrD5GDrV6lMxlY0pBV+ow1XXgy82o4nebUH/OaTyMP4kCExHCujnfTrXB9ja8cgoCFdX0dVSYGKfKPvlbdKTA+NNz67E3HYmEqfce831wniMNUrWQeQlC1m9V2MwqCPBSunzN9fMYbcmQQsrwR5ltSMAsqH3H+Yw/Vb0DcG6Irm1ZWonhw7Wn8MX4fuRTnCdFtMLcE8hbVoIALYR1xgxWSfrAkFHiQcYZnkDRdccqRzxaW8PGRDuH+nblSO5NZsLAAAAAElFTkSuQmCC'),
+      linear-gradient(to right, #00d9d9, #d8ff00);
+    border-radius: 2px 2px 0 0;
   }
-}
 
-.user_card_name {
-  display: block;
-  margin-top: 10px;
-  color: #fff;
-  font-size: 23px;
-  line-height: 1.2;
-  // font-weight: 700;
-  text-align: center;
-  text-shadow: 0 0 55px #000;
-}
-
-.user_card_name:hover {
-  text-decoration: none;
-}
-
-.user_card_phone {
-  padding: 10px 15px;
-  text-align: center;
-}
-
-.user_card_phone .user_card_phone_icon {
-  display: inline-block;
-  margin-bottom: -2px;
-  vertical-align: middle;
-}
-
-.user_card_icon {
-  position: relative;
-  top: 4px;
-  display: inline-block;
-  margin: -5px 0 -5px -2px;
-}
-
-.user_card_desc {
-  position: relative;
-  overflow: hidden;
-  max-height: 80px;
-}
-
-.user_card_desc.user_card_desc_expand {
-  max-height: none;
-}
-
-.user_card_desc_show_more {
-  position: absolute;
-  top: 60px;
-  right: 0;
-  left: 0;
-  display: block;
-  width: 100%;
-  height: 37px;
-  padding: 0 0 15px 0;
-  border: 0;
-  margin: 0;
-  color: #2ea2ea;
-  line-height: 22px;
-  text-align: left;
-  background: #fff;
-  cursor: pointer;
-}
-
-@media (max-width: 767px) {
-  .user_card_desc_show_more {
-    padding: 0 15px 15px 15px;
-  }
-}
-
-.user_card_desc_show_more:hover {
-  text-decoration: underline;
-}
-
-.user_card_desc_show_more:after {
-  content: attr(data-label);
-}
-
-.user_card_desc_show_more:before {
-  position: absolute;
-  right: 0;
-  bottom: 100%;
-  left: 0;
-  height: 30px;
-  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0), #fff);
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #fff);
-  content: '';
-}
-
-.user_card_desc_expand .user_card_desc_show_more {
-  display: none;
-}
-
-@media (max-width: 767px) {
-  .user_card_row_xs {
+  &_picture {
     position: relative;
-    padding: 24px;
-  }
-
-  .user_card_row_xs .user_card_infos {
-    position: relative;
-    padding: 0;
-    min-height: 40px;
-    background-image: none !important;
-    background-color: #fff;
-  }
-
-  .user_card_row_xs .user_card_picture {
-    position: absolute;
-    top: 0;
-    left: 0;
-    max-width: 40px;
-    height: auto;
-  }
-
-  .user_card_row_xs .user_card_name {
-    margin: 0;
-    padding-left: 50px;
-    color: #333;
-    font-size: inherit;
-    text-shadow: none;
-    text-align: left;
-    line-height: inherit;
-  }
-
-  .user_card_row_xs .user_card_name:after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
     z-index: 2;
     display: block;
-    content: '';
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px auto;
+
+    @media (max-width: 767px) {
+      & {
+        width: 70px;
+        height: 70px;
+      }
+    }
   }
 
-  .user_card_row_xs .user_card_phone {
-    position: relative;
-    z-index: 2;
-    display: inline;
-    padding: 0 0 0 50px;
-    text-align: left;
-    font-size: 13px;
-  }
-
-  .user_card_row_xs .user_card_phone_icon {
-    display: none;
-  }
-
-  .user_card_row_xs .user_card_rating_detail {
-    display: none;
+  &_name {
+    display: block;
+    margin-top: 10px;
+    color: #fff;
+    font-size: 23px;
+    line-height: 1.2;
+    // font-weight: 700;
+    text-align: center;
+    text-shadow: 0 0 55px #000;
   }
 }
