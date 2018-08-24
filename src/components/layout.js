@@ -18,6 +18,7 @@ const Layout = ({
   location: { pathname },
   navigationComponent,
   navigationProps,
+  className,
   skipContainer,
 }) => (
   <StaticQuery
@@ -94,8 +95,10 @@ const Layout = ({
 
           <LayoutNavigation {...navigationProps} />
 
-          <main className={classNames({ container: !skipContainer })}>
-            {children}
+          <main className={classNames(className, 'pb-1')}>
+            <div className={classNames({ container: !skipContainer })}>
+              {children}
+            </div>
           </main>
 
           <Footer />
