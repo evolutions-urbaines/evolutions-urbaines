@@ -4,11 +4,12 @@ import Link from 'gatsby-link'
 
 import Layout from '../components/layout'
 
-const CustomerSuccesPage = ({
+const CustomerSuccessPage = ({
   data: { allReviewsYaml, carsYaml },
   location,
 }) => {
   const owner = carsYaml.fields.owner
+
   return (
     <Layout className="bg-steel pt-4" {...{ location }}>
       <h1>Une relation humaine, un service d'excellence</h1>
@@ -118,9 +119,9 @@ const CustomerSuccesPage = ({
   )
 }
 
-export default CustomerSuccesPage
+export default CustomerSuccessPage
 
-export const ReviewsQuery = graphql`
+export const CustomerSuccessQuery = graphql`
   query {
     allReviewsYaml {
       edges {
