@@ -49,7 +49,7 @@ const LandingTemplate = ({ data, location }) => {
       <USP segmentCategory={frontmatter.segmentCategory} />
 
       {frontmatter.segmentRecommendation && (
-        <div className="row shadow-steel">
+        <div className="row bg-light shadow-steel">
           <div
             className="col-md bg-cover"
             style={{
