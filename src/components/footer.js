@@ -3,7 +3,7 @@ import Link from 'gatsby-link'
 
 const Footer = () => (
   <footer className="navbar navbar-expand-md navbar-dark bg-dark text-center">
-    <div className="container justify-content-between">
+    <div className="container justify-content-center justify-content-sm-between">
       <div className="navbar-text text-nowrap">© Evolutions Urbaines 2018</div>
 
       <div className="navbar-nav align-items-center">
