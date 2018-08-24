@@ -6,7 +6,7 @@ moment.locale('fr')
 moment.updateLocale('fr', {
   meridiem: function(hour, minute, isLowercase) {
     if (hour > 11) {
-      return isLowercase ? 'après-midi' : 'PM'
+      return isLowercase ? 'apr.-midi' : 'PM'
     } else {
       return isLowercase ? 'matin' : 'AM'
     }
