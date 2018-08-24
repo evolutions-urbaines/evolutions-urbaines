@@ -77,8 +77,8 @@ const CustomerSuccesPage = ({
             </div>
 
             <div className="col-12 col-md-8">
-              <div className="bg-white rounded shadow pt-5 px-5">
-                {allReviewsYaml.edges[0].node.fields.cars.map(car => (
+              {allReviewsYaml.edges[0].node.fields.cars.map(car => (
+                <div className="bg-white rounded shadow pt-5 px-5 mb-5">
                   <div className="pb-5" key={car.id}>
                     <h4 className="mb-5">{car.title}</h4>
 
@@ -115,8 +115,8 @@ const CustomerSuccesPage = ({
                       )
                     )}
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
