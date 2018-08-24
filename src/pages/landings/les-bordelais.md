@@ -12,8 +12,8 @@ segmentRepresentativePhotoUrl: >-
 segmentRepresentativeName: Nelly Meunier
 segmentRepresentativeRole: Co-fondatrice de l'association "Les Bordelais"
 segmentRepresentativeSpeech: >-
-  Génial ! Pour vous rendre en entretien d'embauche dans la métropole de
-  Bordeaux, vous disposez de voitures neuves en autopartage places des
+  Génial ! Pour vous rendre en entretien d'embauche dans la Métropole de
+  Bordeaux, vous disposez de voitures neuves en autopartage place des
   Quinconces. Arrivez détendu et décrochez-le, ce job !
 ---
 
