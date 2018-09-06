@@ -2,7 +2,7 @@
 title: Exemple CoWorking
 segmentCategory: business
 segmentAroundExpression: autour du CoWorking
-segmentLogoUrl: 'http://theoffice.typepad.com/.a/6a0120a6f79b2f970b0128769d559f970c-800wi'
+segmentLogoUrl: 'https://theoffice.typepad.com/.a/6a0120a6f79b2f970b0128769d559f970c-800wi'
 drivyAddressSearchUrl: >-
   https://www.drivy.com/search?address_source=google&only_responsive=true&country_scope=FR&latitude=44.8446096&longitude=-0.574546999999939&page=1&address=1+Place+des+Quinconces%2C+Bordeaux%2C+France&city_display_name=Bordeaux
 segmentRecommendation: true
