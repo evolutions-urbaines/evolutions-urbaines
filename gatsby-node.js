@@ -121,6 +121,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
           .get(`${process.env.API_URL}/users/${node.user_id}/reviews`, {
             headers: {
               'X-VL-Authorization': process.env.VL_AUTHORIZATION,
+              'Accept-Language': 'fr',
             },
           })
           .then(({ data }) => {
